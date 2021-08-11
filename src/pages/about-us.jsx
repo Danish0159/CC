@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import hero from '../assets/images/vactor/about-hero.png'
 import welcome from '../assets/images/vactor/welcome-ligh.png'
@@ -13,7 +13,9 @@ const About = () => {
 
   const [formState, setFormState] = useState({
     name: "",
+    phone: "",
     email: "",
+    message: "",
   });
 
   const encode = (data) => {
@@ -42,8 +44,6 @@ const About = () => {
   }
 
 
-
-  // handleChange
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -173,12 +173,39 @@ const About = () => {
                           <div className="col-lg-6">
                             <div className="single_input">
                               <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                onChange={handleChange}
+                                value={formState.phone}
+                                placeholder="Phone" />
+                            </div>
+                          </div>
+                          {/* Single input */}
+                          {/* Single input */}
+                          <div className="col-lg-6">
+                            <div className="single_input">
+                              <input
                                 id="email"
-                                type="email"
                                 name="email"
                                 onChange={handleChange}
                                 value={formState.email}
-                                placeholder="email" />
+                                type="email"
+                                placeholder="Email" />
+                            </div>
+                          </div>
+                          {/* Single input */}
+                          {/* Single input */}
+                          <div className="col-12">
+                            <div className="single_input">
+                              <textarea
+                                id="message"
+                                name="message"
+                                type="text"
+                                onChange={handleChange}
+                                value={formState.message}
+                                defaultValue={""}
+                                placeholder="Message" />
                             </div>
                           </div>
                           {/* Single input */}
