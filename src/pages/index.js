@@ -24,6 +24,39 @@ import AOS from 'aos';
 
 // markup
 const IndexPage = () => {
+
+  const [formState, setFormState] = React.useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  }
+
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "home", ...formState })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  }
+
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -265,33 +298,59 @@ const IndexPage = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action>
+                      <form onSubmit={handleSubmit} name="home" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="home" />
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" />
+                              <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                onChange={handleChange}
+                                value={formState.name}
+                                placeholder="Full Name" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" />
+                              <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                onChange={handleChange}
+                                value={formState.phone}
+                                placeholder="Phone" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="email" placeholder="Email" />
+                              <input
+                                id="email"
+                                name="email"
+                                onChange={handleChange}
+                                value={formState.email}
+                                type="email"
+                                placeholder="Email" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea name id placeholder="Message" defaultValue={""} />
+                              <textarea
+                                id="message"
+                                name="message"
+                                type="text"
+                                onChange={handleChange}
+                                value={formState.message}
+                                defaultValue={""}
+                                placeholder="Message" />
                             </div>
                           </div>
                           {/* Single input */}
