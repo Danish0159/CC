@@ -27,15 +27,15 @@ const IndexPage = () => {
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
-        delay: 50,
-        once: true
+      delay: 50,
+      once: true
     });
     AOS.refresh();
-}, [])
+  }, [])
   return (
     <div className="full-waypper">
-        <section className="full-waypper-area-about full-waypper-area-home">
-          <Layout>
+      <section className="full-waypper-area-about full-waypper-area-home">
+        <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
@@ -265,7 +265,7 @@ const IndexPage = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action>
+                      <form action netlify>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
@@ -318,9 +318,9 @@ const IndexPage = () => {
           {/*===============================================
                             End Send Us a Message Area Design
                 ================================================ */}
-                </Layout>
-        </section>
-      </div>
+        </Layout>
+      </section>
+    </div>
   )
 }
 

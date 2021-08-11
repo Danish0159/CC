@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import hero from '../assets/images/vactor/about-hero.png'
 import contact_v from '../assets/images/vactor/contact-v.png'
 import call from '../assets/images/icon/call.png'
@@ -17,18 +17,18 @@ import Layout from '../components/Layout'
 import AOS from 'aos';
 
 const ContactUs = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-        delay: 50,
-        once: true
-        });
-        AOS.refresh();
-    }, [])
-    return (
-        <div className="full-waypper">
-        <section className="full-waypper-area-about full-waypper-area-contact"> 
-        <Layout>  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 50,
+      once: true
+    });
+    AOS.refresh();
+  }, [])
+  return (
+    <div className="full-waypper">
+      <section className="full-waypper-area-about full-waypper-area-contact">
+        <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
@@ -37,7 +37,7 @@ const ContactUs = () => {
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">
-                  <div className="hero_content_text" data-aos="fade-up"> 
+                  <div className="hero_content_text" data-aos="fade-up">
                     <div className="hero_content hero_content_contact">
                       <h1>Contact Us</h1>
                       <p>We provide the right Security Solutions and Services to protect your valuable information assets and your Home Network from Cyber Adversaries and Criminals. We have a mission to make your Smart Home Safe !!</p>
@@ -121,7 +121,7 @@ const ContactUs = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action>
+                      <form action netlify>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
@@ -196,7 +196,7 @@ const ContactUs = () => {
                 </div>
                 {/* Single Items */}
                 {/* Single Items */}
-                <div className="col-lg-4 col-md-6"> 
+                <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
                     <img src={solutions_2} alt="protect" />
                     <h4>Network Security</h4>
@@ -265,10 +265,10 @@ const ContactUs = () => {
           {/*===============================================
                       End Cybersecurity Solutions Area Design
                 ================================================ */}
-                </Layout>
-        </section>
-      </div>
-    )
+        </Layout>
+      </section>
+    </div>
+  )
 }
 
 export default ContactUs

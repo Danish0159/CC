@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import hero from '../assets/images/vactor/about-hero.png'
 import welcome from '../assets/images/vactor/welcome-ligh.png'
@@ -17,11 +17,11 @@ const About = () => {
       once: true
     });
     AOS.refresh();
-}, [])
-    return (
-        <div className="full-waypper">
-        <section className="full-waypper-area-about">   
-                <Layout>
+  }, [])
+  return (
+    <div className="full-waypper">
+      <section className="full-waypper-area-about">
+        <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
@@ -30,7 +30,7 @@ const About = () => {
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">
-                  <div className="hero_content_text" data-aos="fade-up"> 
+                  <div className="hero_content_text" data-aos="fade-up">
                     <div className="hero_content">
                       <h1>About Us</h1>
                       <p>Smart Home Safe is a boutique cybersecurity firm with a mission to help people and households protect and defend their Smart Homes against Cybersecurity Attacks.</p>
@@ -119,7 +119,7 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action>
+                      <form action netlify>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
@@ -170,9 +170,9 @@ const About = () => {
             </div>
           </section>
         </Layout>
-        </section>
-      </div>
-    )
+      </section>
+    </div>
+  )
 }
 
 export default About
