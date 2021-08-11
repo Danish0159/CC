@@ -119,7 +119,7 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action="POST" name="about" netlify>
+                      <form action="POST" name="about" data-netlify="true">
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
