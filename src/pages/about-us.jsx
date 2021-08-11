@@ -119,7 +119,7 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form name="about" method="POST" data-netlify="true">
+                      <form Content-Type="application/x-www-form-urlencoded" name="about" method="POST" data-netlify="true">
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
@@ -145,7 +145,7 @@ const About = () => {
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea type="text" name="message" id="text" placeholder="Message" defaultValue={""} />
+                              <textarea type="text" name="message" placeholder="Message" />
                             </div>
                           </div>
                           {/* Single input */}
@@ -157,26 +157,6 @@ const About = () => {
                           </div>
                           {/* Submit Button */}
                         </div>
-                      </form>
-                      <form name="test form" method="POST" data-netlify="true">
-                        <p>
-                          <label>Your Name: <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                          <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                          <label>Your Role: <select name="role[]" multiple>
-                            <option value="leader">Leader</option>
-                            <option value="follower">Follower</option>
-                          </select></label>
-                        </p>
-                        <p>
-                          <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                          <button type="submit">Send</button>
-                        </p>
                       </form>
                     </div>
                   </div>
