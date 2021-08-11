@@ -119,33 +119,33 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form name="about" netlify>
+                      <form action="POST" name="about" netlify>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" />
+                              <input type="text" placeholder="Full Name" name="name" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" />
+                              <input type="text" placeholder="Phone" name="phone" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="email" placeholder="Email" />
+                              <input type="email" placeholder="Email" name="email" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea name id placeholder="Message" defaultValue={""} />
+                              <textarea name="textarea" id placeholder="Message" defaultValue={""} />
                             </div>
                           </div>
                           {/* Single input */}
