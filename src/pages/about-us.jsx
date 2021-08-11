@@ -11,7 +11,7 @@ import AOS from 'aos';
 
 const About = () => {
 
-  const [formState, setFormState] = useStatetate({
+  const [formState, setFormState] = useState({
     name: "",
     phone: "",
   });
