@@ -265,7 +265,7 @@ const IndexPage = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action="POST" name="home" data-netlify="true">
+                      <form action="/thanks" type="hidden" name="form-name" value="contact" data-netlify="true">
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
