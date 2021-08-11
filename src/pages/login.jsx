@@ -56,7 +56,7 @@ const Login = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="user_login_input" data-aos="fade-up">
-                    <form name="login" method="POST" data-netlify="true">
+                    <form action>
                       {/* Single */}
                       <div className="login_input">
                         <input type="text" placeholder="Email" />

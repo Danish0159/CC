@@ -11,27 +11,39 @@ import AOS from 'aos';
 
 const About = () => {
 
-  const [state, setState] = React.useState({})
+  const [formState, setFormState] = useState({
+    name: "",
+    phone: "",
+  });
 
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value
     })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
   }
 
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", formState })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  }
+
+
+
+  // handleChange
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -141,39 +153,32 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form name="contact"
-                        method="post"
-                        action="/thanks/"
-                        data-netlify="true"
-                        onSubmit={handleSubmit}
-                        data-netlify-honeypot="bot-field"
-                      >
+                      <form onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="about" />
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" name="name" onChange={handleChange} />
+                              <input
+                                id="name"
+                                name="name"
+                                type="text"
+                                onChange={handleChange}
+                                value={formState.name}
+                                placeholder="Full Name" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" name="phone" onChange={handleChange} />
-                            </div>
-                          </div>
-                          {/* Single input */}
-                          {/* Single input */}
-                          <div className="col-lg-6">
-                            <div className="single_input">
-                              <input type="email" placeholder="Email" name="email" onChange={handleChange} />
-                            </div>
-                          </div>
-                          {/* Single input */}
-                          {/* Single input */}
-                          <div className="col-12">
-                            <div className="single_input">
-                              <textarea type="text" name="message" placeholder="Message" onChange={handleChange} />
+                              <input
+                                id="phone"
+                                type="text"
+                                name="email"
+                                onChange={handleChange}
+                                value={formState.phone}
+                                placeholder="Phone" />
                             </div>
                           </div>
                           {/* Single input */}
@@ -199,7 +204,6 @@ const About = () => {
           </section>
         </Layout>
       </section>
-
     </div>
   )
 }

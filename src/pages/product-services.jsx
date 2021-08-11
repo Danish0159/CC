@@ -360,33 +360,33 @@ const ProductServices = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form name="product" method="POST" data-netlify="true">
+                      <form action>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" name="name" />
+                              <input type="text" placeholder="Full Name" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" name="phone" />
+                              <input type="text" placeholder="Phone" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="email" placeholder="Email" name="email" />
+                              <input type="email" placeholder="Email" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea type="text" name="text" placeholder="Message" defaultValue={""} />
+                              <textarea name id placeholder="Message" defaultValue={""} />
                             </div>
                           </div>
                           {/* Single input */}
