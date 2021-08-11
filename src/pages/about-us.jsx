@@ -146,6 +146,7 @@ const About = () => {
                         action="/thanks/"
                         data-netlify="true"
                         onSubmit={handleSubmit}
+                        data-netlify-honeypot="bot-field"
                       >
                         <div className="row">
                           {/* Single input */}
