@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import login from '../assets/images/vactor/login.png'
 import appal from '../assets/images/icon/appal.png'
@@ -7,18 +7,18 @@ import fb from '../assets/images/icon/fb.png'
 import AOS from 'aos';
 
 const Login = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-        delay: 50,
-        once: true
-        });
-        AOS.refresh();
-    }, [])
-    return (
-        <div className="full-waypper">
-        <section className="full-waypper-area-about login-background">
-            <Layout>
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      delay: 50,
+      once: true
+    });
+    AOS.refresh();
+  }, [])
+  return (
+    <div className="full-waypper">
+      <section className="full-waypper-area-about login-background">
+        <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
@@ -27,7 +27,7 @@ const Login = () => {
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">
-                  <div className="hero_content_text" data-aos="fade-up"> 
+                  <div className="hero_content_text" data-aos="fade-up">
                     <div className="hero_content hero_content_contact">
                       <h1>Login / Sign up</h1>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
@@ -56,7 +56,7 @@ const Login = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="user_login_input" data-aos="fade-up">
-                    <form action>
+                    <form name="login" netlify>
                       {/* Single */}
                       <div className="login_input">
                         <input type="text" placeholder="Email" />
@@ -94,10 +94,10 @@ const Login = () => {
           {/*===============================================
                             End We make Area Design
                 ================================================ */}
-                </Layout>
-        </section>
-      </div>
-    )
+        </Layout>
+      </section>
+    </div>
+  )
 }
 
 export default Login

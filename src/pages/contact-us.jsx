@@ -121,7 +121,7 @@ const ContactUs = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action netlify>
+                      <form name="contact" action netlify>
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
