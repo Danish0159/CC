@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import hero from '../assets/images/vactor/about-hero.png'
 import welcome from '../assets/images/vactor/welcome-ligh.png'
@@ -11,7 +11,7 @@ import AOS from 'aos';
 
 const About = () => {
 
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useStatetate({
     name: "",
     phone: "",
   });
