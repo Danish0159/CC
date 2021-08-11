@@ -145,7 +145,7 @@ const About = () => {
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea name="textarea" id placeholder="Message" defaultValue={""} />
+                              <textarea type="text" name="text" id="text" placeholder="Message" defaultValue={""} />
                             </div>
                           </div>
                           {/* Single input */}

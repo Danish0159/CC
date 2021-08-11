@@ -365,28 +365,28 @@ const ProductServices = () => {
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" />
+                              <input type="text" placeholder="Full Name" name="name" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" />
+                              <input type="text" placeholder="Phone" name="phone" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="email" placeholder="Email" />
+                              <input type="email" placeholder="Email" name="email" />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea name id placeholder="Message" defaultValue={""} />
+                              <textarea type="text" name="text" placeholder="Message" defaultValue={""} />
                             </div>
                           </div>
                           {/* Single input */}
