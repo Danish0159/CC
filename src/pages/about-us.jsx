@@ -10,6 +10,28 @@ import AOS from 'aos';
 // import "../assets/css/responsive.css"
 
 const About = () => {
+
+  const [state, setState] = React.useState({})
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error))
+  }
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -119,33 +141,38 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form Content-Type="application/x-www-form-urlencoded" name="about" method="POST" data-netlify="true">
+                      <form name="contact"
+                        method="post"
+                        action="/thanks/"
+                        data-netlify="true"
+                        onSubmit={handleSubmit}
+                      >
                         <div className="row">
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <input type="text" placeholder="Full Name" name="name" />
+                              <input type="text" placeholder="Full Name" name="name" onChange={handleChange} />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="text" placeholder="Phone" name="phone" />
+                              <input type="text" placeholder="Phone" name="phone" onChange={handleChange} />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-lg-6">
                             <div className="single_input">
-                              <input type="email" placeholder="Email" name="email" />
+                              <input type="email" placeholder="Email" name="email" onChange={handleChange} />
                             </div>
                           </div>
                           {/* Single input */}
                           {/* Single input */}
                           <div className="col-12">
                             <div className="single_input">
-                              <textarea type="text" name="message" placeholder="Message" />
+                              <textarea type="text" name="message" placeholder="Message" onChange={handleChange} />
                             </div>
                           </div>
                           {/* Single input */}
