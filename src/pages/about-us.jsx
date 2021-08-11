@@ -13,7 +13,7 @@ const About = () => {
 
   const [formState, setFormState] = useState({
     name: "",
-    phone: "",
+    email: "",
   });
 
   const encode = (data) => {
@@ -173,12 +173,12 @@ const About = () => {
                           <div className="col-lg-6">
                             <div className="single_input">
                               <input
-                                id="phone"
-                                type="text"
+                                id="email"
+                                type="email"
                                 name="email"
                                 onChange={handleChange}
-                                value={formState.phone}
-                                placeholder="Phone" />
+                                value={formState.email}
+                                placeholder="email" />
                             </div>
                           </div>
                           {/* Single input */}
