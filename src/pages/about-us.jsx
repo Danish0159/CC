@@ -4,13 +4,14 @@ import hero from '../assets/images/vactor/about-hero.png'
 import welcome from '../assets/images/vactor/welcome-ligh.png'
 import contact_vector from '../assets/images/vactor/contact-vactor.png'
 import AOS from 'aos';
-// import "../assets/css/bootstrap.min.css"
-// import "../assets/css/normalize.css"
-// import "../assets/css/style.css"
-// import "../assets/css/responsive.css"
+import Recaptcha from 'react-recaptcha'
+import { Helmet } from "react-helmet";
+
+
 
 const About = () => {
 
+  // All the state variables 
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -18,12 +19,21 @@ const About = () => {
     message: "",
   });
 
+  const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
+  const [isVerified, setIsVerified] = React.useState(false);
+  
+  // create a variable to store the component instance
+  let recaptchaInstance;
+
+
+    // Netlify code to handle forms 
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   }
 
+  // Handle all the state variables.
   const handleChange = e => {
     setFormState({
       ...formState,
@@ -31,16 +41,45 @@ const About = () => {
     })
   }
 
+ function handleConsentCheckbox(e) {
+    setAcceptsConsentCheckbox(e.target.checked);
+  }
+
+  function verifyCallback(responce) {
+    if (responce) {
+      setIsVerified(true);
+    }
+  }
+
+  var callback = function () {
+    console.log('Done!!!!');
+  };
+
+
+  // Handle submit
   const handleSubmit = e => {
+       if (isVerified) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "about", ...formState })
+      body: encode({ "form-name": "about", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Your form submission has been received.!"))
       .catch(error => alert(error));
 
-    e.preventDefault();
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      })
+      recaptchaInstance.reset();
+      e.preventDefault();
+       }
+       else{
+            alert("Please verify that you are a human!");
+      e.preventDefault();
+       }
   }
 
 
@@ -54,6 +93,10 @@ const About = () => {
   }, [])
   return (
     <div className="full-waypper">
+      <Helmet>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+      </Helmet>
+
       <section className="full-waypper-area-about">
         <Layout>
           {/*===============================================
@@ -209,10 +252,35 @@ const About = () => {
                             </div>
                           </div>
                           {/* Single input */}
+              {/* CheckBox  */}
+                          {/* Single input */}
+                          <div className="col-12">
+                            <label>
+                              <input
+                                type="checkbox"
+                                name="acceptsconsentcheckbox"
+                                value="value1"
+                                onChange={handleConsentCheckbox}
+                                className="input-checkbox"
+                                required
+                              /> I agree that my submitted data is being collected and stored.</label >
+                          </div>
+                          {/* Single input */}
+                              {/*  Recaptha */}
+                          <div id="recaptcha-module">
+                            <Recaptcha
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
+                              render="explicit"
+                              verifyCallback={verifyCallback}
+                              onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
+                            />
+                          </div>
+      
                           {/* Submit Button */}
                           <div className="col-12">
                             <div className="Submit_button">
-                              <button type="submit">SEND</button>
+                              <button type="submit" value="Submit">SEND</button>
                             </div>
                           </div>
                           {/* Submit Button */}

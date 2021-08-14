@@ -258,6 +258,10 @@
 		margin: 30px 0px;
 	}
 
+	/*Our Privacy Policy Css*/
+	.privacy_section_area {
+		padding-top: 20px;
+	}
 
 
 
@@ -302,6 +306,13 @@
 	}
 	.home_Cybersecurity {
 		   padding-bottom: 75px;
+	}
+
+
+	/*Our Privacy Policy Css*/
+	.pt_pb_r{
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
 

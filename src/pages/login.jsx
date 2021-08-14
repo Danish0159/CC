@@ -15,6 +15,7 @@ const Login = () => {
     });
     AOS.refresh();
   }, [])
+  
   return (
     <div className="full-waypper">
       <section className="full-waypper-area-about login-background">

@@ -15,8 +15,13 @@ import solutions_8 from '../assets/images/icon/solutions_8.png'
 import solutions_9 from '../assets/images/icon/solutions_9.png'
 import Layout from '../components/Layout'
 import AOS from 'aos';
+import Recaptcha from 'react-recaptcha'
+import { Helmet } from "react-helmet";
+
 
 const ContactUs = () => {
+
+    // All the state variables. 
   const [formState, setFormState] = useState({
     name: "",
     phone: "",
@@ -24,12 +29,20 @@ const ContactUs = () => {
     message: "",
   });
 
+    const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
+  const [isVerified, setIsVerified] = React.useState(false);
+  // create a variable to store the component instance
+  let recaptchaInstance;
+
+
+    // Netlify code to handle forms. 
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   }
 
+    // Handle all the state variables.
   const handleChange = e => {
     setFormState({
       ...formState,
@@ -37,16 +50,45 @@ const ContactUs = () => {
     })
   }
 
+   function handleConsentCheckbox(e) {
+    setAcceptsConsentCheckbox(e.target.checked);
+  }
+
+  function verifyCallback(responce) {
+    if (responce) {
+      setIsVerified(true);
+    }
+  }
+
+  var callback = function () {
+    console.log('Done!!!!');
+  };
+
+  // Handle submit
   const handleSubmit = e => {
+      if (isVerified) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState })
+      body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Your form submission has been received.!"))
       .catch(error => alert(error));
 
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      })
+            recaptchaInstance.reset();
     e.preventDefault();
+      }
+
+      else{
+         alert("Please verify that you are a human!");
+      e.preventDefault();
+      }
   }
 
   useEffect(() => {
@@ -209,6 +251,31 @@ const ContactUs = () => {
                             </div>
                           </div>
                           {/* Single input */}
+                       {/* CheckBox  */}
+                          {/* Single input */}
+                          <div className="col-12">
+                            <label>
+                              <input
+                                type="checkbox"
+                                name="acceptsconsentcheckbox"
+                                value="value3"
+                                onChange={handleConsentCheckbox}
+                                className="input-checkbox"
+                                required
+                              /> I agree that my submitted data is being collected and stored.</label >
+                          </div>
+                          {/* Single input */}
+                            {/*  Recaptha */}
+                          <div id="recaptcha-module">
+                            <Recaptcha
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
+                              render="explicit"
+                              verifyCallback={verifyCallback}
+                              onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
+                            />
+                          </div>
+
                           {/* Submit Button */}
                           <div className="col-12">
                             <div className="Submit_button">

@@ -20,8 +20,10 @@ const Navbar = () => {
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about-us">About Us</Link></li>
                             <li><Link to="/product-services">Products & Services</Link></li>
-                            <li><Link to="/contact-us">Contact us</Link></li>
+                            <li><Link to="/contact-us">Contact Us</Link></li>
                             <li><Link to="/login">Login/Sign Up</Link></li> 
+                            {/* <li><Link to="/book-consultation">Book</Link></li>  */}
+                            {/* <li><Link to="/our-privacy-policy">Privacy</Link></li>  */}
                         </ul>
                     </div>
                 </div>
