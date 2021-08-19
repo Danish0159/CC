@@ -38,9 +38,6 @@ const ProductServices = () => {
     React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
-  // create a variable to store the component instance
-  let recaptchaInstance;
-
   // Netlify code to handle forms.
   const encode = (data) => {
     return Object.keys(data)
@@ -93,7 +90,6 @@ const ProductServices = () => {
         email: "",
         message: "",
       });
-            recaptchaInstance.reset();
       e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
@@ -119,16 +115,16 @@ const ProductServices = () => {
           defer
         ></script>
       </Helmet>
-      <section className="full-waypper-area-about full-waypper-area-product-services">
+      <section className="new_about_v_t full-waypper-area-about full-waypper-area-product-services">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
-          <section className="hero_content_product">
-            <div className="container">
+          <section className="hero_content_product hero_content_area_about_f">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content */}
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                   <div className="hero_content_home" data-aos="fade-up">
                     <h1>Products &amp; Services</h1>
                     <p>
@@ -139,7 +135,7 @@ const ProductServices = () => {
                 </div>
                 {/* Hero Content */}
                 {/* Hero Image */}
-                <div className="col-lg-7">
+                <div className="col-lg-6">
                   <div
                     className="hero_image hero_image_home"
                     data-aos="fade-up"
@@ -615,7 +611,6 @@ const ProductServices = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              ref={e => recaptchaInstance = e}
                             />
                           </div>
 

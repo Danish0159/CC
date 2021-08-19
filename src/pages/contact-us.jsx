@@ -31,9 +31,6 @@ const ContactUs = () => {
 
     const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
-  // create a variable to store the component instance
-  let recaptchaInstance;
-
 
     // Netlify code to handle forms. 
   const encode = (data) => {
@@ -81,7 +78,6 @@ const ContactUs = () => {
         email: "",
         message: "",
       })
-            recaptchaInstance.reset();
     e.preventDefault();
       }
 
@@ -101,13 +97,13 @@ const ContactUs = () => {
   }, [])
   return (
     <div className="full-waypper">
-      <section className="full-waypper-area-about full-waypper-area-contact">
+      <section className="new_about_v_t full-waypper-area-about full-waypper-area-contact">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
-          <section className="hero_content_area hero_content_area_contact">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f hero_content_area_contact">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">
@@ -272,7 +268,6 @@ const ContactUs = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              ref={e => recaptchaInstance = e}
                             />
                           </div>
 

@@ -7,14 +7,14 @@ import Layout from "../components/Layout";
 const Privacy = () => {
   return (
     <div className="full-waypper">
-      <section className="full-waypper-area-about our-privacy-policy">
+      <section className="new_about_v_t full-waypper-area-about our-privacy-policy">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
 
-          <section className="hero_content_area hero_content_area_contact">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f hero_content_area_contact">
+            <div className="container-fluid">
               <div className="row">
                 {/* <!-- Hero Content --> */}
                 <div className="col-lg-5">

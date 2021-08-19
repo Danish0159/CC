@@ -106,6 +106,10 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
+        <title>Smart Home Safe Home</title>
+        {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> */}
+
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
@@ -113,16 +117,16 @@ const IndexPage = () => {
         ></script>
       </Helmet>
 
-      <section className="full-waypper-area-about full-waypper-area-home">
+      <section class="new_about_v_t full-waypper-area-about full-waypper-area-home">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
-          <section className="hero_content_area">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content */}
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                   <div className="hero_content_home" data-aos="fade-up">
                     <h1>
                       Your Smarthome is <br />
@@ -135,7 +139,7 @@ const IndexPage = () => {
                 </div>
                 {/* Hero Content */}
                 {/* Hero Image */}
-                <div className="col-lg-7">
+                <div className="col-lg-6">
                   <div
                     className="hero_image hero_image_home"
                     data-aos="fade-up"

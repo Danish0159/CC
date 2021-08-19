@@ -4,6 +4,7 @@ export function onRenderBody(
   { setHeadComponents, setPreBodyComponents, setPostBodyComponents }) {
   setHeadComponents([
     <title>Smart Home Safe</title>,
+
   ]);
 
   setPreBodyComponents([

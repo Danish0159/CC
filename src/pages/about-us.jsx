@@ -21,9 +21,6 @@ const About = () => {
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
-  
-  // create a variable to store the component instance
-  let recaptchaInstance;
 
 
     // Netlify code to handle forms 
@@ -73,7 +70,6 @@ const About = () => {
         email: "",
         message: "",
       })
-      recaptchaInstance.reset();
       e.preventDefault();
        }
        else{
@@ -97,13 +93,13 @@ const About = () => {
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
       </Helmet>
 
-      <section className="full-waypper-area-about">
+      <section className="new_about_v_t full-waypper-area-about">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
-          <section className="hero_content_area">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">
@@ -273,7 +269,6 @@ const About = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              ref={e => recaptchaInstance = e}
                             />
                           </div>
       

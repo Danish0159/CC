@@ -14,17 +14,18 @@ const Login = () => {
       once: true
     });
     AOS.refresh();
+    console.log('TENENT_DOMAIN', process.env.GATSBY_TENENT_DOMAIN)
   }, [])
   
   return (
     <div className="full-waypper">
-      <section className="full-waypper-area-about login-background">
+      <section className="new_about_v_t full-waypper-area-about login-background">
         <Layout>
           {/*===============================================
         					Start Hero Content Area Design
                 ================================================ */}
-          <section className="hero_content_area hero_content_area_contact">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f hero_content_area_contact">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-5">

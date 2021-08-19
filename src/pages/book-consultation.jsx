@@ -6,16 +6,16 @@ import { InlineWidget } from "react-calendly";
 const Book = () => {
   return (
     <div className="full-waypper">
-      <section className="full-waypper-area-about book-onsultation">
+      <section className="new_about_v_t full-waypper-area-about book-onsultation">
         <Layout>
           {/* ===============================================
         					Start Hero Content Area Design
                  ================================================  */}
-          <section className="hero_content_area">
-            <div className="container">
+          <section className="hero_content_area hero_content_area_about_f">
+            <div className="container-fluid">
               <div className="row">
                 {/* Hero Content  */}
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                   <div
                     className="hero_content_text hero_content_text_book"
                     data-aos="fade-up"
@@ -45,7 +45,7 @@ const Book = () => {
                 </div>
                 {/* Hero Content  */}
                 {/* Hero Image  */}
-                <div className="col-lg-7">
+                <div className="col-lg-6">
                   <div className="hero_image" data-aos="fade-up">
                     <img src={hero} alt="Hero Vactor" />
                   </div>

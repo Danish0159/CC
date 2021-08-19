@@ -267,13 +267,13 @@ a:hover {
 .full-waypper-area-about::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/about-us-hero-logo-vactor.png) no-repeat
-    scroll 0 0 / cover;
+  background: url(../images/vactor/hero-new-vactor.png) no-repeat scroll 0 0 /
+    cover;
   z-index: -1;
   top: 0;
   left: 0;
-  width: 880px;
-  height: 838px;
+  width: 579px;
+  height: 508px;
 }
 .header_area {
   padding-top: 26px;
@@ -333,9 +333,7 @@ a:hover {
 img {
   max-width: 100%;
 }
-.hero_image {
-  margin-top: -20px;
-}
+
 .logo a {
   overflow: hidden;
   height: auto;
@@ -356,16 +354,14 @@ img {
   display: none !important;
 }
 .hero_content_area {
-  padding-bottom: 177px;
+  padding-bottom: 50px;
 }
 .hero_image img {
-  width: 100%;
+  width: 80%;
+  float: right;
 }
-
 .hero_content_text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  padding-top: 80px;
 }
 .hero_content h1 {
   font-family: "Avenir Next LT Pro";
@@ -406,8 +402,9 @@ img {
 /*Welcome ARea Css*/
 
 .welcome_seaction_area {
-  padding-top: 14px;
+  padding-top: 0;
   padding-bottom: 96px;
+  margin-top: -30px;
 }
 .welcome_seaction_area .hero_content p {
   color: #000000;
@@ -657,7 +654,7 @@ textarea {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0px 100px;
+  padding: 0px 82px;
 }
 
 .footer_we_accept {
@@ -726,7 +723,7 @@ textarea {
   margin-top: 0px;
 }
 .hero_content_home {
-  padding-top: 180px;
+  padding-top: 80px;
 }
 
 .hero_home_content {
@@ -888,9 +885,7 @@ textarea {
   padding-top: 70px;
   padding-bottom: 70px;
 }
-.hero_content_product .hero_content_home {
-  padding-top: 270px;
-}
+
 .product_singel_item {
 }
 .product_singel_item img {
@@ -1184,9 +1179,9 @@ textarea {
 .p_text p {
   color: #000000;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 22px;
   padding-bottom: 12px;
-  font-size: 15px;
+  font-size: 16px;
 }
 .p_text h3 {
   font-family: "Avenir Next LT Pro";
@@ -1199,14 +1194,40 @@ textarea {
 .list_privacy p {
   padding-bottom: 0px;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 17px;
 }
 .privacy_section_area {
-  padding-top: 264px;
+  padding-top: 50px;
 }
 .pt_t_privacy {
   padding-top: 20px;
+}
+
+/*Header Top Icon Css*/
+.social_top_icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.social_top_icons ul li a {
+  color: #fff;
+  font-size: 15px;
+  margin-left: 22px;
+  display: inline-block;
+}
+
+.hero_content_area_about_f .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 82px;
+  padding: 0px 82px;
+}
+.hero_content_area_about_f {
+  overflow: hidden;
 }
 
 /* Form Checkbox  */
