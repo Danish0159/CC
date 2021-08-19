@@ -417,6 +417,8 @@ img {
 }
 .button {
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
 }
 .button a {
   background: transparent -webkit-linear-gradient(
@@ -754,6 +756,7 @@ textarea {
   color: #4b286d;
   font-weight: 700;
 }
+
 .title_hero p {
   color: #019ee2;
   font-size: 14px;

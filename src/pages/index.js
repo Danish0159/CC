@@ -125,7 +125,7 @@ const IndexPage = () => {
         					Start Hero Content Area Design
                 ================================================ */}
           <section className="hero_content_area hero_content_area_about_f">
-            <div className="container-fluid">
+            <div className="container-fluid home_responsive" >
               <div className="row">
                 {/* Hero Content */}
                 <div className="col-lg-6">
