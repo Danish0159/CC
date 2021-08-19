@@ -6,6 +6,9 @@ import "./src/assets/css/normalize.css"
 import "./src/assets/css/style.css"
 import "./src/assets/css/responsive.css"
 import "aos/dist/aos.css";
+// import "/src/assets/js/main.js"
+// import "/src/assets/js/popper.js"
+// import "/src/assets/js/owl.carousel.min.js"
 
 
 class SessionCheck extends React.Component {
