@@ -6,6 +6,7 @@ import contact_vector from '../assets/images/vactor/contact-vactor.png'
 import AOS from 'aos';
 import Recaptcha from 'react-recaptcha'
 import { Helmet } from "react-helmet";
+import { Link } from 'gatsby'
 
 
 
@@ -146,7 +147,7 @@ const About = () => {
                     <p>We prevent and protect your Home Network and Devices from Cybersecurity Attacks. Our solutions are designed to protect and secure your Home Network and valuable Digital Information Assets.</p>
                     <p>We can customize Cybersecurity solutions to meet your individual need and the level of protection you desire.</p>
                     <div className="button">
-                      <a href="#">Book a Consultation</a>
+                    <Link to="/book-consultation">Book a Consultation</Link>
                     </div>
                   </div>
                 </div>

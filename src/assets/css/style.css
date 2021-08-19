@@ -372,6 +372,7 @@ img {
   font-size: 51px;
   line-height: 61px;
   color: #fff;
+  text-align: center;
 }
 .hero_content p {
   font-size: 14px;
@@ -687,6 +688,7 @@ textarea {
   line-height: 59px;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 .button_home {
   margin-top: 25px;

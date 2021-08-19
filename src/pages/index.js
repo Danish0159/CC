@@ -18,6 +18,8 @@ import Layout from "../components/Layout";
 import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
+import { Link } from 'gatsby'
+
 
 const IndexPage = () => {
   // All the state variables.
@@ -132,8 +134,8 @@ const IndexPage = () => {
                       Your Smarthome is <br />
                       Secure with us
                     </h1>
-                    <div className="button_home">
-                      <a href="/product-services">Book a Consultation</a>
+                    <div className="button">
+                      <Link to="/book-consultation">Book a Consultation</Link>
                     </div>
                   </div>
                 </div>
@@ -234,7 +236,7 @@ const IndexPage = () => {
                       cybersecurity adversaries.
                     </p>
                     <div className="button">
-                      <a href="/product-services">Book a Consultation</a>
+                      <Link to="/book-consultation">Book a Consultation</Link>
                     </div>
                   </div>
                 </div>

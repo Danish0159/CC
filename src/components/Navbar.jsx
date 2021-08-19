@@ -24,11 +24,10 @@ const Navbar = () => {
                        {/* <!-- Top Social Icon --> */}
                                 <div class="social_top_icons">
                                     <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-yelp"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Smarthomesafe-102220405497953" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/mysmarthomesafe" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/mysmarthomesafe" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://biz.yelp.com/home/zd4t8YpeVaWw1jscbJoFBA" target="_blank"><i class="fab fa-yelp"></i></a></li>
                                     </ul>
                                 </div>
                                 {/* <!-- Top Social Icon --> */}
