@@ -13,14 +13,14 @@
     margin-right: auto;
     margin-left: auto;
     padding: 0px 82px;
-    max-width: 1170px;
+    max-width: 1289px;
     float: right;
     overflow: hidden;
   }
 
-  .home_responsive {
-    max-width: 1289px;
-  }
+  /* #home_responsive {
+    max-width: 1289px !important;
+  } */
 
   .hero_content_area_about_f .hero_content h1 {
     color: #551598 !important;
