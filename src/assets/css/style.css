@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
-@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
 
 /*Default css*/
 body {
@@ -286,6 +285,7 @@ a:hover {
   margin-top: 16px;
   position: relative;
 }
+
 .menu_area ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,6 +294,7 @@ a:hover {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
+
 .menu_area ul li a {
   display: inline-block;
   color: #fff;
@@ -356,6 +357,7 @@ img {
   top: 2px;
   display: none !important;
 }
+
 .hero_content_area {
   padding-bottom: 50px;
 }

@@ -140,9 +140,11 @@
     display: none;
     padding: 10px 0px;
   }
+
   .nav-bars {
     display: block !important;
   }
+
   .hero_content_text {
     position: inherit;
     padding-top: 50px;

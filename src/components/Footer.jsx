@@ -3,7 +3,7 @@ import card from '../assets/images/vactor/card.png'
 import '../assets/css/fontawesome-all.min.css'
 import { Link } from 'gatsby'
 
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20509803.js"></script>
+{/* <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20509803.js"></script> */}
 // import 'https://use.fontawesome.com/releases/v5.6.3/css/all.css'
 
 

@@ -109,14 +109,33 @@ const IndexPage = () => {
     <div className="full-waypper">
       <Helmet>
         <title>Smart Home Safe Home</title>
-        {/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> */}
-
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
         ></script>
+
+        {/* <!-- jQuery --> */}
+        {/* <script type="text/javascript" src="../assests/js/vendor/jquery-3.2.1.min.js"></script> */}
+
+        {/* <!-- modernizr --> */}
+        {/* <script src="../assests/js/vendor/modernizr-3.5.0.min.js"></script> */}
+
+        {/* <!-- Owl Carousel JS --> */}
+        {/* <script src="../assests/js/owl.carousel.min.js"></script> */}
+
+        {/* <!-- Bootstrap Popper --> */}
+        {/* <script src="../assests/js/popper.js"></script> */}
+
+        {/* <!-- Bootstrap --> */}
+        {/* <script src="../assests/js/bootstrap.min.js"></script> */}
+
+        {/* <!-- Aso Animation --> */}
+        {/* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
+
+        {/* <!-- Custom Scripts --> */}
+        {/* <script src="../assests/js/main.js"></script> */}
+
       </Helmet>
 
       <section class="new_about_v_t full-waypper-area-about full-waypper-area-home">
