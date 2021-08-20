@@ -16,7 +16,6 @@ import solutions_9 from '../assets/images/icon/solutions_9.png'
 import Layout from '../components/Layout'
 import AOS from 'aos';
 import Recaptcha from 'react-recaptcha'
-import { Helmet } from "react-helmet";
 
 
 const ContactUs = () => {

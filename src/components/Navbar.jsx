@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import logo from "../assets/images/logo/logo.png";
 import { login, getProfile } from "../utils/auth";
 

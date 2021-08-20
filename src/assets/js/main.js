@@ -1,3 +1,5 @@
+import $ from "jquery"
+
 import AOS from "aos";
 
 $(document).ready(function () {

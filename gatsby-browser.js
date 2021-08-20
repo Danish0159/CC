@@ -5,20 +5,12 @@ import "./src/assets/css/normalize.css"
 import "./src/assets/css/style.css"
 import "./src/assets/css/responsive.css"
 import "aos/dist/aos.css";
-// < !--jQuery -->
-// import "./src/assets/js/vendor/jquery-3.2.1.min"
 // < !--modernizr -->
-// import "./src/assets/js/vendor/modernizr-3.5.0.min"
-// < !--Bootstrap Popper-- >
-// import "./src/assets/js/popper"
-// < !--Bootstrap -->
-// import "./src/assets/js/bootstrap.min"
+import "./src/assets/js/vendor/modernizr-3.5.0.min"
 // < !--Custom Scripts-- >
-// import "./src/assets/js/main"
+import "./src/assets/js/main.js"
 // < !--Owl Carousel JS-- >
-// import "./src/assets/js/owl.carousel.min"
-// < !--Aso Animation-- >
-// import "aos/dist/aos"
+import "./src/assets/js/owl.carousel.min"
 
 
 

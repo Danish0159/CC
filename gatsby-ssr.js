@@ -41,13 +41,6 @@ export function onRenderBody(
 
 
   setPostBodyComponents([
-    <script key="1" type="text/javascript" src="/src/assests/js/vendor/modernizr-3.5.0.min.js"></script>,
-    <script key="2" type="text/javascript" src="/src/assests/js/vendor/jquery-3.2.1.min.js"></script>,
-    <script key="3" type="text/javascript" src="/src/assests/js/popper.js"></script>,
-    <script key="4" type="text/javascript" src="/src/assests/js/bootstrap.min.js"></script>,
-    <script key="5" type="text/javascript" src="/src/assests/js/owl.carousel.min.js"></script>,
-    <script key="6" type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>,
-    <script key="7" type="text/javascript" src="/src/assests/js/main.js"></script>,
     <script key="abc" type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/20509803.js"></script>,
   ]);
 }
