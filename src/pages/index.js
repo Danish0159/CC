@@ -31,10 +31,10 @@ const IndexPage = () => {
   });
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
-  const [isVerified, setIsVerified] = React.useState(false);
+  // const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  let recaptchaInstance;
+  // let recaptchaInstance;
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -57,44 +57,43 @@ const IndexPage = () => {
     setAcceptsConsentCheckbox(e.target.checked);
   }
 
-  function verifyCallback(responce) {
-    if (responce) {
-      setIsVerified(true);
-    }
-  }
+  // function verifyCallback(responce) {
+  //   if (responce) {
+  //     setIsVerified(true);
+  //   }
+  // }
 
-  var callback = function () {
-    console.log("Done!!!!");
-  };
+  // var callback = function () {
+  //   console.log("Done!!!!");
+  // };
 
   // Handle submit
   const handleSubmit = (e) => {
-    if (isVerified) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "home",
-          ...formState,
-          acceptsconsentcheckbox: acceptsConsentCheckbox,
-        }),
-      })
-        .then(() => alert("Your form submission has been received.!"))
-        .catch((error) => alert(error));
+    // if (isVerified) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "home",
+        ...formState,
+        acceptsconsentcheckbox: acceptsConsentCheckbox,
+      }),
+    })
+      // .then(() => alert("Your form submission has been received.!"))
+      .catch((error) => alert(error));
 
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      recaptchaInstance.reset();
-      e.preventDefault();
-    } else {
-      alert("Please verify that you are a human!");
-      e.preventDefault();
-    }
+    setFormState({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+    // recaptchaInstance.reset();
+    // e.preventDefault();
   };
+  // else {
+  //   alert("Please verify that you are a human!");
+  //   e.preventDefault();
 
   React.useEffect(() => {
     AOS.init({
@@ -113,28 +112,6 @@ const IndexPage = () => {
           async
           defer
         ></script>
-
-        {/* <!-- jQuery --> */}
-        {/* <script type="text/javascript" src="../assests/js/vendor/jquery-3.2.1.min.js"></script> */}
-
-        {/* <!-- modernizr --> */}
-        {/* <script src="../assests/js/vendor/modernizr-3.5.0.min.js"></script> */}
-
-        {/* <!-- Owl Carousel JS --> */}
-        {/* <script src="../assests/js/owl.carousel.min.js"></script> */}
-
-        {/* <!-- Bootstrap Popper --> */}
-        {/* <script src="../assests/js/popper.js"></script> */}
-
-        {/* <!-- Bootstrap --> */}
-        {/* <script src="../assests/js/bootstrap.min.js"></script> */}
-
-        {/* <!-- Aso Animation --> */}
-        {/* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> */}
-
-        {/* <!-- Custom Scripts --> */}
-        {/* <script src="../assests/js/main.js"></script> */}
-
       </Helmet>
 
       <section class="new_about_v_t full-waypper-area-about full-waypper-area-home">
@@ -526,7 +503,7 @@ const IndexPage = () => {
                           {/* Single input */}
 
                           {/*  Recaptha */}
-                          <div id="recaptcha-module">
+                          {/* <div id="recaptcha-module">
                             <Recaptcha
                               sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
@@ -534,7 +511,7 @@ const IndexPage = () => {
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
                             />
-                          </div>
+                          </div> */}
 
                           {/* Submit Button */}
                           <div className="col-12">
