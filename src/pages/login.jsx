@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
-import login from '../assets/images/vactor/login.png'
-import appal from '../assets/images/icon/appal.png'
-import google from '../assets/images/icon/google.png'
-import fb from '../assets/images/icon/fb.png'
+import login from '../assets/images/vactor/login.webp'
+import appal from '../assets/images/icon/appal.webp'
+import google from '../assets/images/icon/google.webp'
+import fb from '../assets/images/icon/fb.webp'
 import AOS from 'aos';
 
 const Login = () => {

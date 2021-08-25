@@ -1,19 +1,19 @@
 import * as React from "react";
-import home_hero from "../assets/images/vactor/home-hero-vactor.png";
-import protect from "../assets/images/icon/protect.png";
-import email from "../assets/images/icon/email.png";
-import internet from "../assets/images/icon/internet.png";
-import cyberscurity from "../assets/images/vactor/cyberscurity.png";
-import solutions_1 from "../assets/images/icon/solutions_1.png";
-import solutions_2 from "../assets/images/icon/solutions_2.png";
-import solutions_3 from "../assets/images/icon/solutions_3.png";
-import solutions_4 from "../assets/images/icon/solutions_4.png";
-import solutions_5 from "../assets/images/icon/solutions_5.png";
-import solutions_6 from "../assets/images/icon/solutions_6.png";
-import solutions_7 from "../assets/images/icon/solutions_7.png";
-import solutions_8 from "../assets/images/icon/solutions_8.png";
-import solutions_9 from "../assets/images/icon/solutions_9.png";
-import contact_vactor from "../assets/images/vactor/contact-vactor.png";
+import home_hero from "../assets/images/vactor/home-hero-vactor.webp";
+import protect from "../assets/images/icon/protect.webp";
+import email from "../assets/images/icon/email.webp";
+import internet from "../assets/images/icon/internet.webp";
+import cyberscurity from "../assets/images/vactor/cyberscurity.webp";
+import solutions_1 from "../assets/images/icon/solutions_1.webp";
+import solutions_2 from "../assets/images/icon/solutions_2.webp";
+import solutions_3 from "../assets/images/icon/solutions_3.webp";
+import solutions_4 from "../assets/images/icon/solutions_4.webp";
+import solutions_5 from "../assets/images/icon/solutions_5.webp";
+import solutions_6 from "../assets/images/icon/solutions_6.webp";
+import solutions_7 from "../assets/images/icon/solutions_7.webp";
+import solutions_8 from "../assets/images/icon/solutions_8.webp";
+import solutions_9 from "../assets/images/icon/solutions_9.webp";
+import contact_vactor from "../assets/images/vactor/contact-vactor.webp";
 import Layout from "../components/Layout";
 import AOS from "aos";
 import Recaptcha from "react-recaptcha";
@@ -108,7 +108,6 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        <title>Smart Home Safe Home</title>
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async

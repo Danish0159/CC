@@ -33,12 +33,12 @@ const Navbar = () => {
                     href="https://www.facebook.com/Smarthomesafe-102220405497953"
                     target="_blank"
                   >
-                    <i class="fab fa-facebook-f"></i>
+                    <i id="top_icons" class="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
                   <a href="https://twitter.com/mysmarthomesafe" target="_blank">
-                    <i class="fab fa-twitter"></i>
+                    <i id="top_icons" class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                     href="https://www.instagram.com/mysmarthomesafe"
                     target="_blank"
                   >
-                    <i class="fab fa-instagram"></i>
+                    <i id="top_icons" class="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
@@ -54,7 +54,7 @@ const Navbar = () => {
                     href="https://biz.yelp.com/home/zd4t8YpeVaWw1jscbJoFBA"
                     target="_blank"
                   >
-                    <i class="fab fa-yelp"></i>
+                    <i id="top_icons" class="fab fa-yelp"></i>
                   </a>
                 </li>
               </ul>

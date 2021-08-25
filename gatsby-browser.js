@@ -6,11 +6,11 @@ import "./src/assets/css/style.css"
 import "./src/assets/css/responsive.css"
 import "aos/dist/aos.css";
 // < !--modernizr -->
-import "./src/assets/js/vendor/modernizr-3.5.0.min"
+// import "./src/assets/js/vendor/modernizr-3.5.0.min"
 // < !--Custom Scripts-- >
-import "./src/assets/js/main.js"
+// import "./src/assets/js/main.js"
 // < !--Owl Carousel JS-- >
-import "./src/assets/js/owl.carousel.min"
+// import "./src/assets/js/owl.carousel.min"
 
 
 

@@ -1,25 +1,25 @@
 import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
-import contact_vector from "../assets/images/vactor/contact-vactor.png";
-import hero_lock from "../assets/images/product/hero-lock.png";
-import lock_2 from "../assets/images/product/lock-2.png";
-import monitor from "../assets/images/product/monitor.png";
-import solutions_2 from "../assets/images/icon/solutions_2.png";
-import solutions_3 from "../assets/images/icon/solutions_3.png";
-import solutions_4 from "../assets/images/icon/solutions_4.png";
-import solutions_5 from "../assets/images/icon/solutions_5.png";
-import solutions_6 from "../assets/images/icon/solutions_6.png";
-import solutions_7 from "../assets/images/icon/solutions_7.png";
-import solutions_8 from "../assets/images/icon/solutions_8.png";
-import solutions_9 from "../assets/images/icon/solutions_9.png";
-import network from "../assets/images/product/network.png";
-import email from "../assets/images/product/email.png";
-import browser_security from "../assets/images/product/browser-security.png";
-import internet_access from "../assets/images/product/internet-access.png";
-import file from "../assets/images/product/file.png";
-import social from "../assets/images/product/social.png";
-import security from "../assets/images/product/security.png";
-import recovery from "../assets/images/product/recovery.png";
+import contact_vector from "../assets/images/vactor/contact-vactor.webp";
+import hero_lock from "../assets/images/product/hero-lock.webp";
+import lock_2 from "../assets/images/product/lock-2.webp";
+import monitor from "../assets/images/product/monitor.webp";
+import solutions_2 from "../assets/images/icon/solutions_2.webp";
+import solutions_3 from "../assets/images/icon/solutions_3.webp";
+import solutions_4 from "../assets/images/icon/solutions_4.webp";
+import solutions_5 from "../assets/images/icon/solutions_5.webp";
+import solutions_6 from "../assets/images/icon/solutions_6.webp";
+import solutions_7 from "../assets/images/icon/solutions_7.webp";
+import solutions_8 from "../assets/images/icon/solutions_8.webp";
+import solutions_9 from "../assets/images/icon/solutions_9.webp";
+import network from "../assets/images/product/network.webp";
+import email from "../assets/images/product/email.webp";
+import browser_security from "../assets/images/product/browser-security.webp";
+import internet_access from "../assets/images/product/internet-access.webp";
+import file from "../assets/images/product/file.webp";
+import social from "../assets/images/product/social.webp";
+import security from "../assets/images/product/security.webp";
+import recovery from "../assets/images/product/recovery.webp";
 import Layout from "../components/Layout";
 import AOS from "aos";
 import Recaptcha from "react-recaptcha";
@@ -108,13 +108,13 @@ const ProductServices = () => {
 
   return (
     <div className="full-waypper">
-      <Helmet>
+      {/* <Helmet>
         <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
         ></script>
-      </Helmet>
+      </Helmet> */}
       <section className="new_about_v_t full-waypper-area-about full-waypper-area-product-services">
         <Layout>
           {/*===============================================

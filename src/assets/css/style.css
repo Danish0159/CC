@@ -261,15 +261,15 @@ a:hover {
 /************************************/
 
 .full-waypper-area-about {
-  background: url(../images/background/about-us-background.png) no-repeat scroll
-    0 0 / 100% 100%;
+  background: url(../images/background/about-us-background.webp) no-repeat
+    scroll 0 0 / 100% 100%;
   position: relative;
   z-index: 1;
 }
 .full-waypper-area-about::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/hero-new-vactor.png) no-repeat scroll 0 0 /
+  background: url(../images/vactor/hero-new-vactor.webp) no-repeat scroll 0 0 /
     cover;
   z-index: -1;
   top: 0;
@@ -297,7 +297,7 @@ a:hover {
 
 .menu_area ul li a {
   display: inline-block;
-  color: #fff;
+  color: #551598;
   font-size: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -506,7 +506,7 @@ img {
 .our_mission_area::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/our-mission-after.png) no-repeat scroll 0 0 /
+  background: url(../images/vactor/our-mission-after.webp) no-repeat scroll 0 0 /
     cover;
   top: 0px;
   left: -25px;
@@ -587,7 +587,7 @@ textarea {
 .contact_area::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+  background: url(../images/vactor/our-mission-after_contact.webp) no-repeat
     scroll 0 0 / cover;
   right: -15px;
   width: 192px;
@@ -633,8 +633,8 @@ textarea {
 .footer_area::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/footer_vactor_after.png) no-repeat scroll 0 0 /
-    cover;
+  background: url(../images/vactor/footer_vactor_after.webp) no-repeat scroll 0
+    0 / cover;
   left: 0px;
   width: 637px;
   height: 133px;
@@ -680,7 +680,7 @@ textarea {
 /*Home page Css*/
 
 .full-waypper-area-about.full-waypper-area-home {
-  background: url(../images/background/home-us-background.png) no-repeat scroll
+  background: url(../images/background/home-us-background.webp) no-repeat scroll
     0 0 / 100% 100%;
   position: relative;
   z-index: 1;
@@ -808,7 +808,7 @@ textarea {
 .home_Cybersecurity::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+  background: url(../images/vactor/our-mission-after_contact.webp) no-repeat
     scroll 0 0 / cover;
   right: -15px;
   width: 192px;
@@ -828,7 +828,7 @@ textarea {
 .Solutions_home_secion::before {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/solution_after.png) no-repeat scroll 0 0 /
+  background: url(../images/vactor/solution_after.webp) no-repeat scroll 0 0 /
     cover;
   right: 0px;
   width: 335px;
@@ -840,7 +840,7 @@ textarea {
 .Solutions_home_secion::after {
   position: absolute;
   content: " ";
-  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+  background: url(../images/vactor/our-mission-after_contact.webp) no-repeat
     scroll 0 0 / cover;
   left: -15px;
   width: 194px;
@@ -877,8 +877,8 @@ textarea {
 
 /*Products & Services – 2*/
 .full-waypper-area-about.full-waypper-area-product-services {
-  background: url(../images/background/products-services.png) no-repeat scroll 0
-    0 / 100% 100%;
+  background: url(../images/background/products-services.webp) no-repeat scroll
+    0 0 / 100% 100%;
   position: relative;
   z-index: 1;
 }
@@ -944,7 +944,7 @@ textarea {
 /*Contact page Css*/
 
 .full-waypper-area-about.full-waypper-area-contact {
-  background: url(../images/background/contact-us-background.png) no-repeat
+  background: url(../images/background/contact-us-background.webp) no-repeat
     scroll 0 0 / 100% 100%;
   position: relative;
   z-index: 1;
@@ -1058,7 +1058,7 @@ textarea {
 /*Login page Css*/
 
 .full-waypper-area-about.login-background {
-  background: url(../images/background/login-background.png) no-repeat scroll 0
+  background: url(../images/background/login-background.webp) no-repeat scroll 0
     0 / 100% 100%;
   position: relative;
   z-index: 1;
@@ -1142,7 +1142,7 @@ textarea {
 /*Login page Css*/
 
 .full-waypper-area-about.book-onsultation {
-  background: url(../images/background/book-onsultation.png) no-repeat scroll 0
+  background: url(../images/background/book-onsultation.webp) no-repeat scroll 0
     0 / 100% 100%;
   position: relative;
   z-index: 1;
@@ -1180,8 +1180,8 @@ textarea {
 
 /*Our Privacy Policy Css*/
 .full-waypper-area-about.our-privacy-policy {
-  background: url(../images/background/our_privacy_olicy.png) no-repeat scroll 0
-    0 / 100% 100%;
+  background: url(../images/background/our_privacy_olicy.webp) no-repeat scroll
+    0 0 / 100% 100%;
   position: relative;
   z-index: 1;
 }
@@ -1276,4 +1276,9 @@ label {
 /* Recaptcha  */
 #recaptcha-module {
   margin: 0px auto 25px auto;
+}
+
+/* TOp social icons */
+#top_icons {
+  color: #551598;
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import privacy from "../assets/images/vactor/privacy-vactor.png";
-import man from "../assets/images/vactor/man-book.png";
-import police from "../assets/images/vactor/police.png";
+import privacy from "../assets/images/vactor/privacy-vactor.webp";
+import man from "../assets/images/vactor/man-book.webp";
+import police from "../assets/images/vactor/police.webp";
 import Layout from "../components/Layout";
 
 const Privacy = () => {

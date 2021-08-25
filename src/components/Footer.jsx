@@ -1,5 +1,5 @@
 import React from 'react'
-import card from '../assets/images/vactor/card.png'
+import card from '../assets/images/vactor/card.webp'
 import '../assets/css/fontawesome-all.min.css'
 import { Link } from 'gatsby'
 

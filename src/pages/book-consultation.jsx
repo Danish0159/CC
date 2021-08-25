@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import hero from "../assets/images/vactor/book.png";
+import hero from "../assets/images/vactor/book.webp";
 import { InlineWidget } from "react-calendly";
 
 const Book = () => {

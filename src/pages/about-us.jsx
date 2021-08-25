@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Layout from '../components/Layout'
-import hero from '../assets/images/vactor/about-hero.png'
-import welcome from '../assets/images/vactor/welcome-ligh.png'
-import contact_vector from '../assets/images/vactor/contact-vactor.png'
+import hero from '../assets/images/vactor/about-hero.webp'
+import welcome from '../assets/images/vactor/welcome-ligh.webp'
+import contact_vector from '../assets/images/vactor/contact-vactor.webp'
 import AOS from 'aos';
 import Recaptcha from 'react-recaptcha'
 import { Helmet } from "react-helmet";
@@ -90,9 +90,9 @@ const About = () => {
   }, [])
   return (
     <div className="full-waypper">
-      <Helmet>
+      {/* <Helmet>
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-      </Helmet>
+      </Helmet> */}
 
       <section className="new_about_v_t full-waypper-area-about">
         <Layout>
