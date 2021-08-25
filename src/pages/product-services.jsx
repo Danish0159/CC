@@ -80,8 +80,8 @@ const ProductServices = () => {
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
         }),
-      })
-        .catch((error) => alert(error));
+      })      
+      .catch((error) => alert(error));
 
       setFormState({
         name: "",
@@ -607,7 +607,7 @@ const ProductServices = () => {
                           {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
+                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}

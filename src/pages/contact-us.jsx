@@ -68,7 +68,7 @@ const ContactUs = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-    })
+    }).then(() => navigate("/"))
       .catch(error => alert(error));
 
       setFormState({
@@ -82,7 +82,7 @@ const ContactUs = () => {
 
       else{
          alert("Please verify that you are a human!");
-        //  e.preventDefault();
+         e.preventDefault();
       }
   }
 
@@ -272,7 +272,7 @@ const ContactUs = () => {
                             {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
+                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
