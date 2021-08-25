@@ -34,8 +34,7 @@ const ProductServices = () => {
     message: "",
   });
 
-  const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] =
-    React.useState(false);
+  const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
   // Netlify code to handle forms.
@@ -92,7 +91,7 @@ const ProductServices = () => {
       // e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
-      // e.preventDefault();
+      e.preventDefault();
     }
   };
 

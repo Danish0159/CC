@@ -63,25 +63,24 @@ const ContactUs = () => {
   
   // Handle submit
   const handleSubmit = e => {
-    e.preventDefault();
-      if (isVerified) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-    })
+    if (isVerified) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
+      })
       .catch(error => alert(error));
-
+      
       setFormState({
         name: "",
         phone: "",
         email: "",
         message: "",
       })
-      }
-
-      else{
-         alert("Please verify that you are a human!");
+      // e.preventDefault();
+    }
+    else{
+      alert("Please verify that you are a human!");
       e.preventDefault();
       }
   }
@@ -199,7 +198,7 @@ const ContactUs = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form action="/book-consultation" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="row">
                           {/* Single input */}
