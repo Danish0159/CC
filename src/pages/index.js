@@ -31,10 +31,10 @@ const IndexPage = () => {
   });
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
-  const [isVerified, setIsVerified] = React.useState(false);
+  // const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  let recaptchaInstance;
+  // let recaptchaInstance;
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -57,42 +57,42 @@ const IndexPage = () => {
     setAcceptsConsentCheckbox(e.target.checked);
   }
 
-  function verifyCallback(responce) {
-    if (responce) {
-      setIsVerified(true);
-    }
-  }
+  // function verifyCallback(responce) {
+  //   if (responce) {
+  //     setIsVerified(true);
+  //   }
+  // }
 
-  var callback = function () {
-    // console.log("Done!!!!");
-  };
+  // var callback = function () {
+  //   console.log("Done!!!!");
+  // };
 
   // Handle submit
   const handleSubmit = (e) => {
-    if (isVerified) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "home",
-          ...formState,
-          acceptsconsentcheckbox: acceptsConsentCheckbox,
-        }),
-      })
-        .catch((error) => alert(error));
+    // if (isVerified) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "home",
+        ...formState,
+        acceptsconsentcheckbox: acceptsConsentCheckbox,
+      }),
+    })
+      .catch((error) => alert(error));
 
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      recaptchaInstance.reset();
-      e.preventDefault();
-    } else {
-      alert("Please verify that you are a human!");
-      e.preventDefault();
-    }
+    setFormState({
+      name: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+    // recaptchaInstance.reset();
+    // e.preventDefault();
+    // } else {
+    // alert("Please verify that you are a human!");
+    // e.preventDefault();
+    // }
   };
 
   React.useEffect(() => {
@@ -510,7 +510,7 @@ const IndexPage = () => {
                           {/* Single input */}
 
                           {/*  Recaptha */}
-                          <div id="recaptcha-module">
+                          {/* <div id="recaptcha-module">
                             <Recaptcha
                               sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
@@ -518,7 +518,7 @@ const IndexPage = () => {
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
                             />
-                          </div>
+                          </div> */}
 
                           {/* Submit Button */}
                           <div className="col-12">
