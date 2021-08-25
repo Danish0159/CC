@@ -39,7 +39,7 @@ const ContactUs = () => {
       .join("&");
   }
 
-    // Handle all the state variables.
+// Handle all the state variables.
   const handleChange = e => {
     setFormState({
       ...formState,
@@ -58,7 +58,7 @@ const ContactUs = () => {
   }
 
   var callback = function () {
-    console.log('Done!!!!');
+    // console.log('Done!!!!');
   };
 
   // Handle submit
@@ -77,12 +77,12 @@ const ContactUs = () => {
         email: "",
         message: "",
       })
-    e.preventDefault();
+     e.preventDefault();
       }
 
       else{
          alert("Please verify that you are a human!");
-      e.preventDefault();
+        //  e.preventDefault();
       }
   }
 

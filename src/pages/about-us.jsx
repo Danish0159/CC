@@ -49,9 +49,9 @@ const About = () => {
     }
   }
 
-  var callback = function () {
-    console.log('Done!!!!');
-  };
+  // var callback = function () {
+  //   console.log('Done!!!!');
+  // };
 
 
   // Handle submit
@@ -70,11 +70,11 @@ const About = () => {
         email: "",
         message: "",
       })
-      e.preventDefault();
+      // e.preventDefault();
        }
        else{
             alert("Please verify that you are a human!");
-      e.preventDefault();
+            e.preventDefault();
        }
   }
 
@@ -273,7 +273,7 @@ const About = () => {
                               sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
                               verifyCallback={verifyCallback}
-                              onloadCallback={callback}
+                              // onloadCallback={callback}
                             />
                           </div>
       

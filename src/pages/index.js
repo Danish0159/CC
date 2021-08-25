@@ -81,13 +81,13 @@ const IndexPage = () => {
       })
         .catch((error) => alert(error));
 
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      recaptchaInstance.reset();
+      // setFormState({
+      //   name: "",
+      //   phone: "",
+      //   email: "",
+      //   message: "",
+      // });
+      // recaptchaInstance.reset();
     }
     else {
       alert("Please verify that you are a human!");
