@@ -19,7 +19,7 @@ const Navbar = () => {
               <Link to="/">
                 <img src={logo} alt="SmartHomeSafe" />
               </Link>
-              <a class="nav-bars">
+              <a class="nav-bars" href="#">
                 <i class="fas fa-bars"></i>
               </a>
             </div>
