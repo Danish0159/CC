@@ -73,7 +73,7 @@ const About = () => {
         message: "",
       })
        // recaptchaInstance.reset();
-      // e.preventDefault();
+      e.preventDefault();
        }
        else{
       alert("Please verify that you are a human!");

@@ -82,7 +82,6 @@ const ProductServices = () => {
           "form-name": "product",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
-          reCaptcha:isVerified,
         }),
       })
         .catch((error) => alert(error));
@@ -617,7 +616,6 @@ const ProductServices = () => {
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
-                              name="recaptcha"
                             />
                           </div>
 
