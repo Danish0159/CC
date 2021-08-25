@@ -34,8 +34,12 @@ const ProductServices = () => {
     message: "",
   });
 
-  const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
+  const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] =
+    React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
+
+  // create a variable to store the component instance
+  let recaptchaInstance;
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -78,16 +82,18 @@ const ProductServices = () => {
           "form-name": "product",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
+          reCaptcha:isVerified,
         }),
       })
         .catch((error) => alert(error));
 
-      // setFormState({
-      //   name: "",
-      //   phone: "",
-      //   email: "",
-      //   message: "",
-      // });
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+      // recaptchaInstance.reset();
       // e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
@@ -610,6 +616,8 @@ const ProductServices = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
+                              name="recaptcha"
                             />
                           </div>
 

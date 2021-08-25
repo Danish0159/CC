@@ -23,6 +23,8 @@ const About = () => {
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
+    // create a variable to store the component instance
+  let recaptchaInstance;
 
     // Netlify code to handle forms 
   const encode = (data) => {
@@ -49,9 +51,9 @@ const About = () => {
     }
   }
 
-  // var callback = function () {
-  //   console.log('Done!!!!');
-  // };
+  var callback = function () {
+    console.log('Done!!!!');
+  };
 
 
   // Handle submit
@@ -70,6 +72,7 @@ const About = () => {
         email: "",
         message: "",
       })
+       // recaptchaInstance.reset();
       // e.preventDefault();
        }
        else{
@@ -197,7 +200,7 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form action="/book-consultation" onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="about" />
                         <div className="row">
                           {/* Single input */}
@@ -273,7 +276,8 @@ const About = () => {
                               sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
                               render="explicit"
                               verifyCallback={verifyCallback}
-                              // onloadCallback={callback}
+                              onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
                             />
                           </div>
       

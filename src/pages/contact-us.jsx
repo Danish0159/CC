@@ -32,6 +32,9 @@ const ContactUs = () => {
     const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
+  // create a variable to store the component instance
+  let recaptchaInstance;
+
     // Netlify code to handle forms. 
   const encode = (data) => {
     return Object.keys(data)
@@ -60,28 +63,29 @@ const ContactUs = () => {
   var callback = function () {
     console.log('Done!!!!');
   };
-  
+
   // Handle submit
   const handleSubmit = e => {
-    if (isVerified) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-      })
+      if (isVerified) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
+    })
       .catch(error => alert(error));
-      
+
       setFormState({
         name: "",
         phone: "",
         email: "",
         message: "",
       })
-      // e.preventDefault();
-    }
-    else{
-      alert("Please verify that you are a human!");
-      e.preventDefault();
+       // recaptchaInstance.reset();
+    // e.preventDefault();
+      }
+      else{
+         alert("Please verify that you are a human!");
+         e.preventDefault();
       }
   }
 
@@ -198,7 +202,7 @@ const ContactUs = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action="/book-consultation" onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="row">
                           {/* Single input */}
@@ -271,10 +275,11 @@ const ContactUs = () => {
                             {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
+                             ref={e => recaptchaInstance = e}
                             />
                           </div>
 
