@@ -81,7 +81,6 @@ const ProductServices = () => {
           acceptsconsentcheckbox: acceptsConsentCheckbox,
         }),
       })
-        .then(() => alert("Your form submission has been received.!"))
         .catch((error) => alert(error));
 
       setFormState({
@@ -108,13 +107,14 @@ const ProductServices = () => {
 
   return (
     <div className="full-waypper">
-      {/* <Helmet>
-        <script
-          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-          async
-          defer
-        ></script>
-      </Helmet> */}
+      <Helmet>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart Home Safe | Cybersecurity Solutions & Product Subscriptions</title>
+        <meta name="description" content="We Protect and Defend your Smart Home from Cybersecurity Attacks. We provide Cybersecurity Solutions for your Smart Home." />
+        <meta name="keywords" content="are smart homes safe, Endpoint Security, Internet Security, Identity & Access Security, File Integrity Monitoring, safe secure browser, secure email, emailsecurity, how to send secure email, security monitoring, network security, network and security, what is network security, network firewall security, social engineering, social engineering security, what is social engineering, Phishing Attacks" />
+      </Helmet>
       <section className="new_about_v_t full-waypper-area-about full-waypper-area-product-services">
         <Layout>
           {/*===============================================
@@ -140,7 +140,7 @@ const ProductServices = () => {
                     className="hero_image hero_image_home"
                     data-aos="fade-up"
                   >
-                    <img src={hero_lock} alt="Hero Vactor" />
+                    <img src={hero_lock} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -162,7 +162,7 @@ const ProductServices = () => {
                     className="product_singel_image mb_40"
                     data-aos="fade-up"
                   >
-                    <img src={lock_2} alt="lock Vactor" />
+                    <img src={lock_2} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -170,7 +170,7 @@ const ProductServices = () => {
                 {/* Single solutions */}
                 <div className="col-lg-6">
                   <div className="product_singel_item" data-aos="fade-up">
-                    <img src={monitor} alt="protect" />
+                    <img src={monitor} alt="SmartHomeSafe" />
                     <h4>Endpoint &amp; Device Security</h4>
                     <p>
                       We provide cost-effective Endpoint Security to secure
@@ -202,7 +202,7 @@ const ProductServices = () => {
                 {/* Single product */}
                 <div className="col-lg-6">
                   <div className="product_singel_item mb_40" data-aos="fade-up">
-                    <img src={solutions_2} alt="icon" />
+                    <img src={solutions_2} alt="SmartHomeSafe" />
                     <h4>Network Security</h4>
                     <p>
                       Our Network Security solutions and services protects your
@@ -222,7 +222,7 @@ const ProductServices = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="product_singel_image" data-aos="fade-up">
-                    <img src={network} alt="lock Vactor" />
+                    <img src={network} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -244,7 +244,7 @@ const ProductServices = () => {
                     className="product_singel_image mb_40"
                     data-aos="fade-up"
                   >
-                    <img src={email} alt="lock Vactor" />
+                    <img src={email} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -252,7 +252,7 @@ const ProductServices = () => {
                 {/* Single solutions */}
                 <div className="col-lg-6">
                   <div className="product_singel_item" data-aos="fade-up">
-                    <img src={solutions_3} alt="protect" />
+                    <img src={solutions_3} alt="SmartHomeSafe" />
                     <h4>Email Security</h4>
                     <p>
                       Our Email Security solutions and services will protect
@@ -284,7 +284,7 @@ const ProductServices = () => {
                 {/* Single product */}
                 <div className="col-lg-6">
                   <div className="product_singel_item mb_40" data-aos="fade-up">
-                    <img src={solutions_4} alt="icon" />
+                    <img src={solutions_4} alt="SmartHomeSafe" />
                     <h4>Browser/Internet Security</h4>
                     <p>
                       Our solutions will provide you with Safe Browsers and
@@ -302,7 +302,7 @@ const ProductServices = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="product_singel_image" data-aos="fade-up">
-                    <img src={browser_security} alt="lock Vactor" />
+                    <img src={browser_security} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -324,7 +324,7 @@ const ProductServices = () => {
                     className="product_singel_image mb_40"
                     data-aos="fade-up"
                   >
-                    <img src={internet_access} alt="lock Vactor" />
+                    <img src={internet_access} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -332,7 +332,7 @@ const ProductServices = () => {
                 {/* Single solutions */}
                 <div className="col-lg-6">
                   <div className="product_singel_item" data-aos="fade-up">
-                    <img src={solutions_5} alt="protect" />
+                    <img src={solutions_5} alt="SmartHomeSafe" />
                     <h4>Identity &amp; Access Security</h4>
                     <p>
                       Our Identify and Access Security solutions is an essential
@@ -366,7 +366,7 @@ const ProductServices = () => {
                 {/* Single product */}
                 <div className="col-lg-6">
                   <div className="product_singel_item mb_40" data-aos="fade-up">
-                    <img src={solutions_6} alt="icon" />
+                    <img src={solutions_6} alt="SmartHomeSafe" />
                     <h4>Storage, Files &amp; Folders </h4>
                     <p>
                       We provide File integrity monitoring (FIM) solutions that
@@ -388,7 +388,7 @@ const ProductServices = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="product_singel_image" data-aos="fade-up">
-                    <img src={file} alt="lock Vactor" />
+                    <img src={file} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -410,7 +410,7 @@ const ProductServices = () => {
                     className="product_singel_image mb_40"
                     data-aos="fade-up"
                   >
-                    <img src={social} alt="lock Vactor" />
+                    <img src={social} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -418,7 +418,7 @@ const ProductServices = () => {
                 {/* Single solutions */}
                 <div className="col-lg-6">
                   <div className="product_singel_item" data-aos="fade-up">
-                    <img src={solutions_7} alt="protect" />
+                    <img src={solutions_7} alt="SmartHomeSafe" />
                     <h4>Social Engineering</h4>
                     <p>
                       We protect you against Cybercriminals who try to steal
@@ -446,7 +446,7 @@ const ProductServices = () => {
                 {/* Single product */}
                 <div className="col-lg-6">
                   <div className="product_singel_item mb_40" data-aos="fade-up">
-                    <img src={solutions_8} alt="icon" />
+                    <img src={solutions_8} alt="SmartHomeSafe" />
                     <h4>24/7 Security Monitoring</h4>
                     <p>
                       We provide 24/7 Security Monitoring of your Home Network
@@ -462,7 +462,7 @@ const ProductServices = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="product_singel_image" data-aos="fade-up">
-                    <img src={security} alt="lock Vactor" />
+                    <img src={security} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -484,14 +484,14 @@ const ProductServices = () => {
                     className="product_singel_image mb_40"
                     data-aos="fade-up"
                   >
-                    <img src={recovery} alt="lock Vactor" />
+                    <img src={recovery} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
                 {/* Single product */}
                 <div className="col-lg-6">
                   <div className="product_singel_item " data-aos="fade-up">
-                    <img src={solutions_9} alt="icon" />
+                    <img src={solutions_9} alt="SmartHomeSafe" />
                     <h4>Incident Response &amp; Recovery</h4>
                     <p>
                       Our services ensure that you are prepared and able to
@@ -628,7 +628,7 @@ const ProductServices = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="contact_image" data-aos="fade-down-left">
-                    <img src={contact_vector} alt="Welcome Vactor" />
+                    <img src={contact_vector} alt="SmartHomeSafe" />
                   </div>
                 </div>
               </div>

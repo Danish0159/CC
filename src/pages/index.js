@@ -31,10 +31,10 @@ const IndexPage = () => {
   });
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
-  // const [isVerified, setIsVerified] = React.useState(false);
+  const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  // let recaptchaInstance;
+  let recaptchaInstance;
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -57,43 +57,43 @@ const IndexPage = () => {
     setAcceptsConsentCheckbox(e.target.checked);
   }
 
-  // function verifyCallback(responce) {
-  //   if (responce) {
-  //     setIsVerified(true);
-  //   }
-  // }
+  function verifyCallback(responce) {
+    if (responce) {
+      setIsVerified(true);
+    }
+  }
 
-  // var callback = function () {
-  //   console.log("Done!!!!");
-  // };
+  var callback = function () {
+    console.log("Done!!!!");
+  };
 
   // Handle submit
   const handleSubmit = (e) => {
-    // if (isVerified) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "home",
-        ...formState,
-        acceptsconsentcheckbox: acceptsConsentCheckbox,
-      }),
-    })
-      // .then(() => alert("Your form submission has been received.!"))
-      .catch((error) => alert(error));
+    if (isVerified) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "home",
+          ...formState,
+          acceptsconsentcheckbox: acceptsConsentCheckbox,
+        }),
+      })
+        .catch((error) => alert(error));
 
-    setFormState({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-    // recaptchaInstance.reset();
-    // e.preventDefault();
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+      recaptchaInstance.reset();
+      e.preventDefault();
+    } else {
+      alert("Please verify that you are a human!");
+      e.preventDefault();
+    }
   };
-  // else {
-  //   alert("Please verify that you are a human!");
-  //   e.preventDefault();
 
   React.useEffect(() => {
     AOS.init({
@@ -112,6 +112,13 @@ const IndexPage = () => {
           async
           defer
         ></script>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart Home Safe | Cybersecurity Protection for your SmartHome Network & Devices</title>
+        <meta name="description" content="Cybersecurity Solutions made simple for your Home Network - Keep your Smart Home Safe." />
+        <meta name="keywords" content="Smart Home Security, safe smart home security, smart home security services, smart home security, home security solutions, home security smart home, home security software, best smart home security, Home Security" />
       </Helmet>
 
       <section class="new_about_v_t full-waypper-area-about full-waypper-area-home">
@@ -141,7 +148,7 @@ const IndexPage = () => {
                     className="hero_image hero_image_home"
                     data-aos="fade-up"
                   >
-                    <img src={home_hero} alt="Hero Vactor" />
+                    <img src={home_hero} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -177,7 +184,7 @@ const IndexPage = () => {
                         <img
                           href="/product-services"
                           src={protect}
-                          alt="protect"
+                          alt="SmartHomeSafe"
                         />
                         <p>Endpoint Security</p>
                       </a>
@@ -186,7 +193,7 @@ const IndexPage = () => {
                     {/* Item */}
                     <div className="single_item" data-aos="fade-up">
                       <a href="/product-services">
-                        <img src={email} alt="email" />
+                        <img src={email} alt="SmartHomeSafe" />
                         <p>Email Security</p>
                       </a>
                     </div>
@@ -194,7 +201,7 @@ const IndexPage = () => {
                     {/* Item */}
                     <div className="single_item" data-aos="fade-left">
                       <a href="/product-services">
-                        <img src={internet} alt="internet" />
+                        <img src={internet} alt="SmartHomeSafe" />
                         <p>Internet Security</p>
                       </a>
                     </div>
@@ -216,7 +223,7 @@ const IndexPage = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="welcome_image" data-aos="fade-right">
-                    <img src={cyberscurity} alt="cyberscurity Vactor" />
+                    <img src={cyberscurity} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -264,7 +271,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-up">
                     <a href="/product-services">
-                      <img src={solutions_1} alt="protect" />
+                      <img src={solutions_1} alt="SmartHomeSafe" />
                       <h4>Endpoint &amp; Device Security</h4>
                     </a>
                     <p>
@@ -280,7 +287,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-up">
                     <a href="/product-services">
-                      <img src={solutions_2} alt="protect" />
+                      <img src={solutions_2} alt="SmartHomeSafe" />
                       <h4>Network Security</h4>
                     </a>
                     <p>
@@ -297,7 +304,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-up">
                     <a href="/product-services">
-                      <img src={solutions_3} alt="protect" />
+                      <img src={solutions_3} alt="SmartHomeSafe" />
                       <h4>Email Security</h4>
                     </a>
                     <p>
@@ -313,7 +320,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-right">
                     <a href="/product-services">
-                      <img src={solutions_4} alt="protect" />
+                      <img src={solutions_4} alt="SmartHomeSafe" />
                       <h4>Browser/Internet Security</h4>
                     </a>
                     <p>
@@ -329,7 +336,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-up">
                     <a href="/product-services">
-                      <img src={solutions_5} alt="protect" />
+                      <img src={solutions_5} alt="SmartHomeSafe" />
                       <h4>Identity &amp; Access Security</h4>
                     </a>
                     <p>
@@ -346,7 +353,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-left">
                     <a href="/product-services">
-                      <img src={solutions_6} alt="protect" />
+                      <img src={solutions_6} alt="SmartHomeSafe" />
                       <h4>Storage, Files &amp; Folders</h4>
                     </a>
                     <p>
@@ -362,7 +369,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-right">
                     <a href="/product-services">
-                      <img src={solutions_7} alt="protect" />
+                      <img src={solutions_7} alt="SmartHomeSafe" />
                       <h4>Social Engineering</h4>
                     </a>
                     <p>
@@ -376,7 +383,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-up">
                     <a href="/product-services">
-                      <img src={solutions_8} alt="protect" />
+                      <img src={solutions_8} alt="SmartHomeSafe" />
                       <h4>24/7 Security Monitoring</h4>
                     </a>
                     <p>
@@ -391,7 +398,7 @@ const IndexPage = () => {
                 <div className="col-lg-4 col-md-6">
                   <div className="solutions_single_item" data-aos="fade-left">
                     <a href="/product-services">
-                      <img src={solutions_9} alt="protect" />
+                      <img src={solutions_9} alt="SmartHomeSafe" />
                       <h4>Incident Response &amp; Recovery</h4>
                     </a>
                     <p>
@@ -503,7 +510,7 @@ const IndexPage = () => {
                           {/* Single input */}
 
                           {/*  Recaptha */}
-                          {/* <div id="recaptcha-module">
+                          <div id="recaptcha-module">
                             <Recaptcha
                               sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
@@ -511,7 +518,7 @@ const IndexPage = () => {
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
                             />
-                          </div> */}
+                          </div>
 
                           {/* Submit Button */}
                           <div className="col-12">
@@ -527,7 +534,7 @@ const IndexPage = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="contact_image" data-aos="fade-down-left">
-                    <img src={contact_vactor} alt="Welcome Vactor" />
+                    <img src={contact_vactor} alt="SmartHomeSafe" />
                   </div>
                 </div>
               </div>

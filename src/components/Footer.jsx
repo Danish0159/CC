@@ -33,7 +33,7 @@ const Footer = () => {
                         <div class="col-lg-3">
                             <div class="footer_we_accept">
                                 <p>We Accept</p>
-                                <img src={card} alt="Welcome Vactor" />
+                                <img src={card} alt="SmartHomeSafe" />
                             </div>
                         </div>
                     </div>

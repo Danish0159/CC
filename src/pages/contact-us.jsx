@@ -16,6 +16,7 @@ import solutions_9 from '../assets/images/icon/solutions_9.webp'
 import Layout from '../components/Layout'
 import AOS from 'aos';
 import Recaptcha from 'react-recaptcha'
+import { Helmet } from "react-helmet";
 
 
 const ContactUs = () => {
@@ -68,7 +69,6 @@ const ContactUs = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
     })
-      .then(() => alert("Your form submission has been received.!"))
       .catch(error => alert(error));
 
       setFormState({
@@ -96,6 +96,15 @@ const ContactUs = () => {
   }, [])
   return (
     <div className="full-waypper">
+       <Helmet>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SmartHomeSafe | Contact Us</title>
+        <meta name="description" content="Smart Home Safe | Security Solutions and Services designed to protect your Home Network and Digital Information Assets." />
+        <meta name="keywords" content="security solutions, Home Network Security, Digital Information Assets, Smart Home Safe, Smart Home Security, safe smart home security, smart home security services, smart home security, home security solutions, home security smart home, home security software, best smart home security, Home Security." />
+      </Helmet>
+
       <section className="new_about_v_t full-waypper-area-about full-waypper-area-contact">
         <Layout>
           {/*===============================================
@@ -117,7 +126,7 @@ const ContactUs = () => {
                 {/* Hero Image */}
                 <div className="col-lg-7">
                   <div className="hero_image" data-aos="fade-up">
-                    <img src={hero} alt="Hero Vactor" />
+                    <img src={hero} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -136,7 +145,7 @@ const ContactUs = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="welcome_image" data-aos="fade-right">
-                    <img src={contact_v} alt="Welcome Vactor" />
+                    <img src={contact_v} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -165,7 +174,7 @@ const ContactUs = () => {
                 <div className="col-lg-6">
                   <div className="c_info" data-aos="fade-down-right">
                     <div className="icon_c">
-                      <img src={call} alt="call Icon" />
+                      <img src={call} alt="SmartHomeSafe" />
                     </div>
                     <div className="icon_c_text">
                       <h5>Phone</h5>
@@ -176,7 +185,7 @@ const ContactUs = () => {
                 <div className="col-lg-6">
                   <div className="c_info c_info_mail" data-aos="fade-down-left">
                     <div className="icon_c">
-                      <img src={mail} alt="call Icon" />
+                      <img src={mail} alt="SmartHomeSafe" />
                     </div>
                     <div className="icon_c_text">
                       <h5>Email</h5>
@@ -284,7 +293,7 @@ const ContactUs = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="contact_image" data-aos="fade-down-left">
-                    <img src={contact_vector} alt="Welcome Vactor" />
+                    <img src={contact_vector} alt="SmartHomeSafe" />
                   </div>
                 </div>
               </div>
@@ -309,7 +318,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
-                    <img src={solutions_1} alt="protect" />
+                    <img src={solutions_1} alt="SmartHomeSafe" />
                     <h4>Endpoint Security</h4>
                   </div>
                 </div>
@@ -317,7 +326,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
-                    <img src={solutions_2} alt="protect" />
+                    <img src={solutions_2} alt="SmartHomeSafe" />
                     <h4>Network Security</h4>
                   </div>
                 </div>
@@ -325,7 +334,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
-                    <img src={solutions_3} alt="protect" />
+                    <img src={solutions_3} alt="SmartHomeSafe" />
                     <h4>Email Security</h4>
                   </div>
                 </div>
@@ -333,7 +342,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-right">
-                    <img src={solutions_4} alt="protect" />
+                    <img src={solutions_4} alt="SmartHomeSafe" />
                     <h4>Browser/Internet Security</h4>
                   </div>
                 </div>
@@ -341,7 +350,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
-                    <img src={solutions_5} alt="protect" />
+                    <img src={solutions_5} alt="SmartHomeSafe" />
                     <h4>Identity &amp; Access Security</h4>
                   </div>
                 </div>
@@ -349,7 +358,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-left">
-                    <img src={solutions_6} alt="protect" />
+                    <img src={solutions_6} alt="SmartHomeSafe" />
                     <h4>Storage, Files &amp; Folders</h4>
                   </div>
                 </div>
@@ -357,7 +366,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-right">
-                    <img src={solutions_7} alt="protect" />
+                    <img src={solutions_7} alt="SmartHomeSafe" />
                     <h4>Social Engineering</h4>
                   </div>
                 </div>
@@ -365,7 +374,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-up">
-                    <img src={solutions_8} alt="protect" />
+                    <img src={solutions_8} alt="SmartHomeSafe" />
                     <h4>24/7 Security Monitoring</h4>
                   </div>
                 </div>
@@ -373,7 +382,7 @@ const ContactUs = () => {
                 {/* Single Items */}
                 <div className="col-lg-4 col-md-6">
                   <div className="cyber_security_c_items" data-aos="fade-left">
-                    <img src={solutions_9} alt="protect" />
+                    <img src={solutions_9} alt="SmartHomeSafe" />
                     <h4>Incident Response &amp; Recovery</h4>
                   </div>
                 </div>

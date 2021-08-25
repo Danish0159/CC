@@ -32,7 +32,7 @@ const Privacy = () => {
                 {/* <!-- Hero Image --> */}
                 <div className="col-lg-7">
                   <div className="hero_image" data-aos="fade-up">
-                    <img src={privacy} alt="Hero Vactor" />
+                    <img src={privacy} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* <!-- Hero Image --> */}
@@ -107,7 +107,7 @@ const Privacy = () => {
                 </div>
                 <div className="col-md-4">
                   <div className="privacy_Image pt_pb_r" data-aos="fade-up">
-                    <img src={man} alt="Privacy Image" />
+                    <img src={man} alt="SmartHomeSafe" />
                   </div>
                 </div>
               </div>
@@ -171,7 +171,7 @@ const Privacy = () => {
                     className="privacy_Image pt_t_privacy"
                     data-aos="fade-up"
                   >
-                    <img src={police} alt="police Image" />
+                    <img src={police} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 <div className="col-md-7">

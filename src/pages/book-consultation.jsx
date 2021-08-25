@@ -2,10 +2,19 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import hero from "../assets/images/vactor/book.webp";
 import { InlineWidget } from "react-calendly";
+import { Helmet } from "react-helmet";
 
 const Book = () => {
   return (
     <div className="full-waypper">
+       <Helmet>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart Home Safe | Book a Consultant</title>
+        <meta name="description" content="Smart Home Safe | Talk to a Cybersecurity Consultant for help and advice security advice." />
+        <meta name="keywords" content="security help, cybersecurity advice, cybersecurity help, Smart Home Security, safe smart home security, smart home security services, smart home security, home security solutions, home security smart home, home security software, best smart home security, Home Security." />
+      </Helmet>
       <section className="new_about_v_t full-waypper-area-about book-onsultation">
         <Layout>
           {/* ===============================================
@@ -47,7 +56,7 @@ const Book = () => {
                 {/* Hero Image  */}
                 <div className="col-lg-6">
                   <div className="hero_image" data-aos="fade-up">
-                    <img src={hero} alt="Hero Vactor" />
+                    <img src={hero} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image  */}

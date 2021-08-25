@@ -62,7 +62,6 @@ const About = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "about", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
     })
-      .then(() => alert("Your form submission has been received.!"))
       .catch(error => alert(error));
 
       setFormState({
@@ -90,9 +89,14 @@ const About = () => {
   }, [])
   return (
     <div className="full-waypper">
-      {/* <Helmet>
-        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-      </Helmet> */}
+     <Helmet>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Smart Home Safe | About Us</title>
+        <meta name="description" content="Smart Home Safe is a boutique cybersecurity firm with a mission to help people and households protect and defend their Smart Homes against Cybersecurity Attacks." />
+        <meta name="keywords" content="Smart Home Safe, Smart Home Network and Devices,	Smart Home Security, Smart Home Solutions, Home Network Security, Cybersecurity Solutions, Digital Information Assets." />
+      </Helmet>
 
       <section className="new_about_v_t full-waypper-area-about">
         <Layout>
@@ -116,7 +120,7 @@ const About = () => {
                 {/* Hero Image */}
                 <div className="col-lg-7">
                   <div className="hero_image" data-aos="fade-up">
-                    <img src={hero} alt="Hero Vactor" />
+                    <img src={hero} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -135,7 +139,7 @@ const About = () => {
                 {/* Hero Image */}
                 <div className="col-lg-6">
                   <div className="welcome_image" data-aos="fade-right">
-                    <img src={welcome} alt="Welcome Vactor" />
+                    <img src={welcome} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -287,7 +291,7 @@ const About = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="contact_image" data-aos="fade-down-left">
-                    <img src={contact_vector} alt="Welcome Vactor" />
+                    <img src={contact_vector} alt="SmartHomeSafe" />
                   </div>
                 </div>
               </div>

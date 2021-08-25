@@ -40,7 +40,7 @@ const Login = () => {
                 {/* Hero Image */}
                 <div className="col-lg-7">
                   <div className="hero_image" data-aos="fade-up">
-                    <img src={login} alt="Hero Vactor" />
+                    <img src={login} alt="SmartHomeSafe" />
                   </div>
                 </div>
                 {/* Hero Image */}
@@ -85,9 +85,9 @@ const Login = () => {
                 </div>
                 <div className="col-lg-4">
                   <div className="link_button" data-aos="fade-up">
-                    <a href="#"><img src={appal} alt="Icon" />Log in with Apple</a>
-                    <a href="#"><img src={google} alt="Icon" />Log in with Google</a>
-                    <a href="#"><img src={fb} alt="Icon" />Log in with Facebook</a>
+                    <a href="#"><img src={appal} alt="SmartHomeSafe" />Log in with Apple</a>
+                    <a href="#"><img src={google} alt="SmartHomeSafe" />Log in with Google</a>
+                    <a href="#"><img src={fb} alt="SmartHomeSafe" />Log in with Facebook</a>
                   </div>
                 </div>
               </div>
