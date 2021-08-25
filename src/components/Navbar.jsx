@@ -17,7 +17,7 @@ const Navbar = () => {
           <div class="col-lg-3">
             <div class="logo">
               <Link to="/">
-                <img src={logo} />
+                <img src={logo} alt="SmartHomeSafe" />
               </Link>
               <a class="nav-bars">
                 <i class="fas fa-bars"></i>
@@ -32,29 +32,32 @@ const Navbar = () => {
                   <a
                     href="https://www.facebook.com/Smarthomesafe-102220405497953"
                     target="_blank"
+                    rel="noopener"
                   >
-                    <i id="top_icons" class="fab fa-facebook-f"></i>
+                    <i id="top_icons" class="fab fa-facebook-f" aria-label="Read more about SafeSmartHome on facebook"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/mysmarthomesafe" target="_blank">
-                    <i id="top_icons" class="fab fa-twitter"></i>
+                  <a href="https://twitter.com/mysmarthomesafe" target="_blank" rel="noopener">
+                    <i id="top_icons" class="fab fa-twitter" aria-label="Read more about SafeSmartHome on twitter"></i>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://www.instagram.com/mysmarthomesafe"
                     target="_blank"
+                    rel="noopener"
                   >
-                    <i id="top_icons" class="fab fa-instagram"></i>
+                    <i id="top_icons" class="fab fa-instagram" aria-label="Read more about SafeSmartHome on instagram"></i>
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://biz.yelp.com/home/zd4t8YpeVaWw1jscbJoFBA"
                     target="_blank"
+                    rel="noopener"
                   >
-                    <i id="top_icons" class="fab fa-yelp"></i>
+                    <i id="top_icons" class="fab fa-yelp" aria-label="Read more about SafeSmartHome on yelp"></i>
                   </a>
                 </li>
               </ul>

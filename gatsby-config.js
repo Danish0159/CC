@@ -8,5 +8,11 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Gatsby Site",
   },
-  plugins: ["gatsby-plugin-postcss"],
+  plugins: ["gatsby-plugin-postcss",
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }],
 };

@@ -19,6 +19,7 @@
     "aos": "^2.3.4",
     "auth0-js": "^9.16.2",
     "gatsby": "^3.11.0",
+    "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-postcss": "^4.11.0",
     "postcss": "^8.3.6",
     "react": "^17.0.1",

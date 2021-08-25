@@ -17,10 +17,10 @@ const Footer = () => {
                             <div class="footer_social">
                                 <p>Follow Us</p>
                                 <ul>
-                                    <li><a href="https://www.facebook.com/Smarthomesafe-102220405497953" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/mysmarthomesafe" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://www.instagram.com/mysmarthomesafe" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://biz.yelp.com/home/zd4t8YpeVaWw1jscbJoFBA" target="_blank"><i class="fab fa-yelp"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Smarthomesafe-102220405497953" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-label="Read more about SafeSmartHome on facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/mysmarthomesafe" target="_blank" rel="noopener"><i class="fab fa-twitter" aria-label="Read more about SafeSmartHome on twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/mysmarthomesafe" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-label="Read more about SafeSmartHome on instagram"></i></a></li>
+                                    <li><a href="https://biz.yelp.com/home/zd4t8YpeVaWw1jscbJoFBA" target="_blank" rel="noopener"><i class="fab fa-yelp" aria-label="Read more about SafeSmartHome on yelp"></i></a></li>
                                 </ul>
                             </div>
                         </div>

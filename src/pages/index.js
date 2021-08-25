@@ -64,7 +64,7 @@ const IndexPage = () => {
   }
 
   var callback = function () {
-    console.log("Done!!!!");
+    // console.log("Done!!!!");
   };
 
   // Handle submit
