@@ -80,19 +80,19 @@ const ProductServices = () => {
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
         }),
-      })      
-      .catch((error) => alert(error));
+      })
+        .catch((error) => alert(error));
 
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      e.preventDefault();
+      // setFormState({
+      //   name: "",
+      //   phone: "",
+      //   email: "",
+      //   message: "",
+      // });
+      // e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
-      e.preventDefault();
+      // e.preventDefault();
     }
   };
 

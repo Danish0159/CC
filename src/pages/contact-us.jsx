@@ -39,7 +39,7 @@ const ContactUs = () => {
       .join("&");
   }
 
-// Handle all the state variables.
+    // Handle all the state variables.
   const handleChange = e => {
     setFormState({
       ...formState,
@@ -58,17 +58,18 @@ const ContactUs = () => {
   }
 
   var callback = function () {
-    // console.log('Done!!!!');
+    console.log('Done!!!!');
   };
-
+  
   // Handle submit
   const handleSubmit = e => {
+    e.preventDefault();
       if (isVerified) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-    }).then(() => navigate("/"))
+    })
       .catch(error => alert(error));
 
       setFormState({
@@ -77,12 +78,11 @@ const ContactUs = () => {
         email: "",
         message: "",
       })
-     e.preventDefault();
       }
 
       else{
          alert("Please verify that you are a human!");
-         e.preventDefault();
+      e.preventDefault();
       }
   }
 

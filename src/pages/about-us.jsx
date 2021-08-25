@@ -73,8 +73,8 @@ const About = () => {
       // e.preventDefault();
        }
        else{
-            alert("Please verify that you are a human!");
-            // e.preventDefault();
+      alert("Please verify that you are a human!");
+      e.preventDefault();
        }
   }
 
