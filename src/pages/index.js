@@ -19,6 +19,7 @@ import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 
 
 const IndexPage = () => {
