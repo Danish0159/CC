@@ -16,20 +16,10 @@ import solutions_9 from "../assets/images/icon/solutions_9.webp";
 import contact_vactor from "../assets/images/vactor/contact-vactor.webp";
 import Layout from "../components/Layout";
 import AOS from "aos";
-// import Recaptcha from "react-recaptcha";
-import Recaptcha from 'react-google-recaptcha'
-// import { navigate } from 'gatsby'
+import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map(
-      (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-    )
-    .join("&");
-};
 
 const IndexPage = () => {
   // All the state variables.
@@ -41,15 +31,19 @@ const IndexPage = () => {
   });
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
-  // const [isVerified, setIsVerified] = React.useState(false);
+  const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  // let recaptchaInstance;
-  const recaptchaRef = React.createRef()
+  let recaptchaInstance;
 
   // Netlify code to handle forms.
-
-
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   // Handle all the state variables.
   const handleChange = (e) => {
@@ -63,46 +57,43 @@ const IndexPage = () => {
     setAcceptsConsentCheckbox(e.target.checked);
   }
 
-  // function verifyCallback(responce) {
-  //   if (responce) {
-  //     setIsVerified(true);
-  //   }
-  // }
+  function verifyCallback(responce) {
+    if (responce) {
+      setIsVerified(true);
+    }
+  }
 
-  // var callback = function () {
-  //   console.log("Done!!!!");
-  // };
+  var callback = function () {
+    console.log("Done!!!!");
+  };
 
   // Handle submit
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    const recaptchaValue = recaptchaRef.current.getValue()
-    // if (isVerified) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        'form-name': form.getAttribute('home'),
-        acceptsconsentcheckbox: acceptsConsentCheckbox,
-        'g-recaptcha-response': recaptchaValue,
-        ...formState,
-      }),
-    })
-      .catch((error) => alert(error));
+    if (isVerified) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({
+          "form-name": "home",
+          ...formState,
+          acceptsconsentcheckbox: acceptsConsentCheckbox,
+          recaptcha: "true"
+        }),
+      }).then(() => navigate(form.getAttribute('action')))
+        .catch((error) => alert(error));
 
-    // setFormState({
-    //   name: "",
-    //   phone: "",
-    //   email: "",
-    //   message: "",
-    // });
-    // e.preventDefault();
-    // recaptchaInstance.reset();
-    //   } else {
-    //     alert("Please verify that you are a human!");
-    //   e.preventDefault();
-    // }
+      setFormState({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+      // recaptchaInstance.reset();
+      // e.preventDefault();
+    } else {
+      alert("Please verify that you are a human!");
+      e.preventDefault();
+    }
   };
 
   React.useEffect(() => {
@@ -117,11 +108,11 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        {/* <script
+        <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script> */}
+        ></script>
 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -440,8 +431,8 @@ const IndexPage = () => {
                         name="home"
                         method="post"
                         data-netlify="true"
-                        // data-netlify-honeypot="bot-field"
-                        data-netlify-recaptcha="true"
+                        data-netlify-honeypot="bot-field"
+                        action="thank-you"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
@@ -521,16 +512,16 @@ const IndexPage = () => {
                           {/* Single input */}
 
                           {/*  Recaptha */}
-                          {/* <div id="recaptcha-module">
+                          <div id="recaptcha-module">
                             <Recaptcha
                               sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
+                              name="recaptcha"
                               ref={e => recaptchaInstance = e}
                             />
-                          </div> */}
-                          <Recaptcha ref={recaptchaRef} sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA" />
+                          </div>
 
                           {/* Submit Button */}
                           <div className="col-12">
