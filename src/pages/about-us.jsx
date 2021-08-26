@@ -95,12 +95,19 @@ const About = () => {
   return (
     <div className="full-waypper">
      <Helmet>
+
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Smart Home Safe | About Us</title>
         <meta name="description" content="Smart Home Safe is a boutique cybersecurity firm with a mission to help people and households protect and defend their Smart Homes against Cybersecurity Attacks." />
         <meta name="keywords" content="Smart Home Safe, Smart Home Network and Devices,	Smart Home Security, Smart Home Solutions, Home Network Security, Cybersecurity Solutions, Digital Information Assets." />
+          
+           <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script>
       </Helmet>
 
       <section className="new_about_v_t full-waypper-area-about">

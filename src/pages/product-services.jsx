@@ -112,12 +112,18 @@ const ProductServices = () => {
   return (
     <div className="full-waypper">
       <Helmet>
+
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Smart Home Safe | Cybersecurity Solutions & Product Subscriptions</title>
         <meta name="description" content="We Protect and Defend your Smart Home from Cybersecurity Attacks. We provide Cybersecurity Solutions for your Smart Home." />
         <meta name="keywords" content="are smart homes safe, Endpoint Security, Internet Security, Identity & Access Security, File Integrity Monitoring, safe secure browser, secure email, emailsecurity, how to send secure email, security monitoring, network security, network and security, what is network security, network firewall security, social engineering, social engineering security, what is social engineering, Phishing Attacks" />
+    <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script>
       </Helmet>
       <section className="new_about_v_t full-waypper-area-about full-waypper-area-product-services">
         <Layout>
