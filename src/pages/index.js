@@ -80,8 +80,7 @@ const IndexPage = () => {
           acceptsconsentcheckbox: acceptsConsentCheckbox,
           recaptcha: "true"
         }),
-      }).then(() => navigate(form.getAttribute('action')))
-        .catch((error) => alert(error));
+      }).catch((error) => alert(error));
 
       setFormState({
         name: "",
