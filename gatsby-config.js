@@ -1,7 +1,18 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
+
   siteMetadata: {
-    title: `Gatsby Netlify Form Integration`
+    siteUrl: "https://www.yourdomain.tld",
+    title: "My Gatsby Site",
   },
-  plugins: [`gatsby-plugin-react-helmet`]
+  plugins: ["gatsby-plugin-postcss",
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }],
 };
