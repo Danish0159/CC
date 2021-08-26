@@ -18,7 +18,7 @@ import Layout from "../components/Layout";
 import AOS from "aos";
 // import Recaptcha from "react-recaptcha";
 import Recaptcha from 'react-google-recaptcha'
-import { navigate } from 'gatsby'
+// import { navigate } from 'gatsby'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
@@ -87,7 +87,7 @@ const IndexPage = () => {
         'g-recaptcha-response': recaptchaValue,
         ...formState,
       }),
-    }).then(() => navigate(form.getAttribute('action')))
+    })
       .catch((error) => alert(error));
 
     // setFormState({
@@ -441,7 +441,6 @@ const IndexPage = () => {
                         data-netlify="true"
                         // data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
-                        action="/product-services/"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
