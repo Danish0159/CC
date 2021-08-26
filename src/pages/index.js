@@ -45,7 +45,6 @@ const IndexPage = () => {
 
   // create a variable to store the component instance
   // let recaptchaInstance;
-  const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
   const recaptchaRef = React.createRef()
 
   // Netlify code to handle forms.
@@ -118,11 +117,11 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        <script
+        {/* <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script>
+        ></script> */}
 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -531,7 +530,7 @@ const IndexPage = () => {
                               ref={e => recaptchaInstance = e}
                             />
                           </div> */}
-                          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
+                          <Recaptcha ref={recaptchaRef} sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA" />
 
                           {/* Submit Button */}
                           <div className="col-12">
