@@ -19,6 +19,7 @@ import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
+import { navigate } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -77,9 +78,9 @@ const IndexPage = () => {
           "form-name": "home",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
-          recaptcha: "true"
         }),
-      }).catch((error) => alert(error));
+      }).then(() => navigate("/product-services/"))
+        .catch((error) => alert(error));
 
       setFormState({
         name: "",
@@ -517,7 +518,6 @@ const IndexPage = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              name="recaptcha"
                               ref={e => recaptchaInstance = e}
                             />
                           </div>
