@@ -23,6 +23,8 @@ const About = () => {
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
+  // create a variable to store the component instance
+  let recaptchaInstance;
 
     // Netlify code to handle forms 
   const encode = (data) => {
@@ -56,12 +58,15 @@ const About = () => {
 
   // Handle submit
   const handleSubmit = e => {
-       if (isVerified) {
+   if (isVerified) {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "about", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-    })
+      body: encode({ "form-name": "about", ...formState,
+      acceptsconsentcheckbox: acceptsConsentCheckbox,
+      "g-recaptcha-response": recaptchaInstance.current.getValue()
+ })
+})
       .catch(error => alert(error));
 
       setFormState({
@@ -197,7 +202,14 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form 
+                      onSubmit={handleSubmit} 
+                      name="about" 
+                      method="post" 
+                      data-netlify="true" 
+                      data-netlify-honeypot="bot-field"
+                      data-netlify-recaptcha="true"
+                      >
                         <input type="hidden" name="form-name" value="about" />
                         <div className="row">
                           {/* Single input */}
@@ -274,6 +286,7 @@ const About = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
                             />
                           </div>
       

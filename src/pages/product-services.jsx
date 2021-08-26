@@ -38,6 +38,9 @@ const ProductServices = () => {
     React.useState(false);
   const [isVerified, setIsVerified] = React.useState(false);
 
+    // create a variable to store the component instance
+  let recaptchaInstance;
+
   // Netlify code to handle forms.
   const encode = (data) => {
     return Object.keys(data)
@@ -79,6 +82,7 @@ const ProductServices = () => {
           "form-name": "product",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
+          "g-recaptcha-response": recaptchaInstance.current.getValue()
         }),
       })
         .catch((error) => alert(error));
@@ -92,7 +96,7 @@ const ProductServices = () => {
       // e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
-      // e.preventDefault();
+      e.preventDefault();
     }
   };
 
@@ -526,6 +530,7 @@ const ProductServices = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+                        data-netlify-recaptcha="true"
                       >
                         <input type="hidden" name="form-name" value="product" />
                         <div className="row">
@@ -611,6 +616,7 @@ const ProductServices = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
+                              ref={e => recaptchaInstance = e}
                             />
                           </div>
 
