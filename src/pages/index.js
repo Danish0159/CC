@@ -19,7 +19,7 @@ import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
-import { navigate } from 'gatsby'
+// import { navigate } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -70,6 +70,7 @@ const IndexPage = () => {
 
   // Handle submit
   const handleSubmit = (e) => {
+    const recaptchaValue = recaptchaRef.current.getValue()
     if (isVerified) {
       fetch("/", {
         method: "POST",
@@ -78,8 +79,9 @@ const IndexPage = () => {
           "form-name": "home",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
+          'g-recaptcha': recaptchaValue,
         }),
-      }).then(() => navigate("/product-services/"))
+      })
         .catch((error) => alert(error));
 
       setFormState({
@@ -518,7 +520,10 @@ const IndexPage = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              ref={e => recaptchaInstance = e}
+                              // ref={e => recaptch?aInstance = e}
+                              ref={recaptchaRef}
+                              name="g-recaptcha"
+                              value="value2"
                             />
                           </div>
 
