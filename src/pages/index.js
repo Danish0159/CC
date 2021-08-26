@@ -108,11 +108,6 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        <script
-          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-          async
-          defer
-        ></script>
 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -120,6 +115,11 @@ const IndexPage = () => {
         <title>Smart Home Safe | Cybersecurity Protection for your SmartHome Network & Devices</title>
         <meta name="description" content="Cybersecurity Solutions made simple for your Home Network - Keep your Smart Home Safe." />
         <meta name="keywords" content="Smart Home Security, safe smart home security, smart home security services, smart home security, home security solutions, home security smart home, home security software, best smart home security, Home Security" />
+        {/* <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script> */}
       </Helmet>
 
       <section class="new_about_v_t full-waypper-area-about full-waypper-area-home">
