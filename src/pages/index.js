@@ -22,6 +22,7 @@ import Recaptcha from 'react-google-recaptcha'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
+
 const encode = (data) => {
   return Object.keys(data)
     .map(
@@ -48,6 +49,7 @@ const IndexPage = () => {
   const recaptchaRef = React.createRef()
 
   // Netlify code to handle forms.
+
 
 
   // Handle all the state variables.
@@ -116,11 +118,11 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        {/* <script
+        <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script> */}
+        ></script>
 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
