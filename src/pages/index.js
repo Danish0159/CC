@@ -16,7 +16,8 @@ import solutions_9 from "../assets/images/icon/solutions_9.webp";
 import contact_vactor from "../assets/images/vactor/contact-vactor.webp";
 import Layout from "../components/Layout";
 import AOS from "aos";
-import Recaptcha from "react-recaptcha";
+// import Recaptcha from "react-recaptcha";
+import Recaptcha from 'react-google-recaptcha'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
@@ -31,10 +32,12 @@ const IndexPage = () => {
   });
 
   const [acceptsConsentCheckbox, setAcceptsConsentCheckbox] = React.useState(false);
-  const [isVerified, setIsVerified] = React.useState(false);
+  // const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  let recaptchaInstance;
+  // let recaptchaInstance;
+  const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
+  const recaptchaRef = React.createRef()
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -57,43 +60,46 @@ const IndexPage = () => {
     setAcceptsConsentCheckbox(e.target.checked);
   }
 
-  function verifyCallback(responce) {
-    if (responce) {
-      setIsVerified(true);
-    }
-  }
+  // function verifyCallback(responce) {
+  //   if (responce) {
+  //     setIsVerified(true);
+  //   }
+  // }
 
-  var callback = function () {
-    console.log("Done!!!!");
-  };
+  // var callback = function () {
+  //   console.log("Done!!!!");
+  // };
 
   // Handle submit
   const handleSubmit = (e) => {
-    if (isVerified) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": "home",
-          ...formState,
-          acceptsconsentcheckbox: acceptsConsentCheckbox,
-          'g-recaptcha-response': "true",
-        }),
-      })
-        .catch((error) => alert(error));
+    e.preventDefault()
+    const form = e.target
+    const recaptchaValue = recaptchaRef.current.getValue()
+    // if (isVerified) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        'form-name': form.getAttribute('home'),
+        acceptsconsentcheckbox: acceptsConsentCheckbox,
+        'g-recaptcha-response': recaptchaValue,
+        ...formState,
+      }),
+    }).then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
 
-      setFormState({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
-      e.preventDefault();
-      recaptchaInstance.reset();
-    } else {
-      alert("Please verify that you are a human!");
-      e.preventDefault();
-    }
+    // setFormState({
+    //   name: "",
+    //   phone: "",
+    //   email: "",
+    //   message: "",
+    // });
+    // e.preventDefault();
+    // recaptchaInstance.reset();
+    //   } else {
+    //     alert("Please verify that you are a human!");
+    //   e.preventDefault();
+    // }
   };
 
   React.useEffect(() => {
@@ -433,6 +439,7 @@ const IndexPage = () => {
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
+                        action="/product-services"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
@@ -512,7 +519,7 @@ const IndexPage = () => {
                           {/* Single input */}
 
                           {/*  Recaptha */}
-                          <div id="recaptcha-module">
+                          {/* <div id="recaptcha-module">
                             <Recaptcha
                               sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
                               render="explicit"
@@ -520,7 +527,8 @@ const IndexPage = () => {
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
                             />
-                          </div>
+                          </div> */}
+                          <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
 
                           {/* Submit Button */}
                           <div className="col-12">
