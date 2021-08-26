@@ -3,7 +3,7 @@ import Layout from '../layout'
 
 export default () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn't exist... the sadness.</p>
+    <h1>Thank you!</h1>
+    <p>This is a custom thank you page for form submissions</p>
   </Layout>
 )

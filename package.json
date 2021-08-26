@@ -1,32 +1,31 @@
 {
-  "name": "my-gatsby-site",
+  "name": "gatsby-netlify-form-example",
+  "description": "Gatsby Netlify Form example",
   "version": "1.0.0",
-  "private": true,
-  "description": "My Gatsby Site",
-  "author": "mudassar755",
+  "author": "swyx <swyx@dontemail.me>",
+  "dependencies": {
+    "gatsby": "^2.13.35",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "netlify-lambda": "^1.6.0",
+    "react": "^16.8.6",
+    "react-async-script": "^0.9.1",
+    "react-dom": "^16.8.6",
+    "react-google-recaptcha": "^1.1.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1"
+  },
   "keywords": [
     "gatsby"
   ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "postinstall": "netlify-lambda install",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "add": "^2.0.6",
-    "aos": "^2.3.4",
-    "auth0-js": "^9.16.2",
-    "gatsby": "^3.11.0",
-    "gatsby-plugin-html-attributes": "^1.0.5",
-    "gatsby-plugin-postcss": "^4.11.0",
-    "postcss": "^8.3.6",
-    "react": "^17.0.1",
-    "react-calendly": "^2.2.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "react-recaptcha": "^2.3.10",
-    "yarn": "^1.22.11"
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
