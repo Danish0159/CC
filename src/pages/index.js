@@ -18,6 +18,7 @@ import Layout from "../components/Layout";
 import AOS from "aos";
 // import Recaptcha from "react-recaptcha";
 import Recaptcha from 'react-google-recaptcha'
+import { navigate } from 'gatsby'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
@@ -114,11 +115,11 @@ const IndexPage = () => {
   return (
     <div className="full-waypper">
       <Helmet>
-        <script
+        {/* <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script>
+        ></script> */}
 
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
