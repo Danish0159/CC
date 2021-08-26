@@ -8,10 +8,7 @@ import Recaptcha from 'react-recaptcha'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
-
-
 const About = () => {
-
   // All the state variables 
   const [formState, setFormState] = useState({
     name: "",
@@ -58,11 +55,16 @@ const About = () => {
 
   // Handle submit
   const handleSubmit = e => {
+    e.preventDefault();
        if (isVerified) {
+    const recaptchaValue = recaptchaInstance.current.getValue()
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "about", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
+      body: encode({ "form-name": "about",
+       ...formState,
+      acceptsconsentcheckbox: acceptsConsentCheckbox,
+      recaptchaResponse: recaptchaValue, })
     })
       .catch(error => alert(error));
 
@@ -72,8 +74,7 @@ const About = () => {
         email: "",
         message: "",
       })
-       // recaptchaInstance.reset();
-      e.preventDefault();
+       recaptchaInstance.reset();
        }
        else{
       alert("Please verify that you are a human!");
@@ -200,7 +201,7 @@ const About = () => {
                   <div className="contact_from_area" data-aos="fade-down-right">
                     <h3>Send Us a Message</h3>
                     <div className="contact_from_input">
-                      <form action="/book-consultation" onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form onSubmit={handleSubmit} name="about" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="about" />
                         <div className="row">
                           {/* Single input */}

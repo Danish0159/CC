@@ -69,6 +69,8 @@ const IndexPage = () => {
 
   // Handle submit
   const handleSubmit = (e) => {
+    e.preventDefault();
+    const recaptchaValue = recaptchaInstance.current.getValue()
     if (isVerified) {
       fetch("/", {
         method: "POST",
@@ -77,8 +79,9 @@ const IndexPage = () => {
           "form-name": "home",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
+          recaptchaResponse: recaptchaValue,
         }),
-      })
+      }).then(() => navigate(form.getAttribute('action')))
         .catch((error) => alert(error));
 
       setFormState({
@@ -88,7 +91,6 @@ const IndexPage = () => {
         message: "",
       });
       recaptchaInstance.reset();
-      e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
       e.preventDefault();
@@ -431,6 +433,7 @@ const IndexPage = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+                        action="/book-consultation/"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
@@ -517,7 +520,6 @@ const IndexPage = () => {
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
                               ref={e => recaptchaInstance = e}
-                              name="recaptcha"
                             />
                           </div>
 
