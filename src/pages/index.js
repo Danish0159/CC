@@ -19,7 +19,6 @@ import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
-// import { navigate } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -35,8 +34,8 @@ const IndexPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  // let recaptchaInstance; 
-  const recaptchaRef = React.createRef()
+  let recaptchaInstance;
+
   // Netlify code to handle forms.
   const encode = (data) => {
     return Object.keys(data)
@@ -70,7 +69,6 @@ const IndexPage = () => {
 
   // Handle submit
   const handleSubmit = (e) => {
-    const recaptchaValue = recaptchaRef.current.getValue()
     if (isVerified) {
       fetch("/", {
         method: "POST",
@@ -79,7 +77,7 @@ const IndexPage = () => {
           "form-name": "home",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
-          'g-recaptcha': recaptchaValue,
+          "g-recaptcha-response": recaptchaInstance.current.getValue()
         }),
       })
         .catch((error) => alert(error));
@@ -434,7 +432,7 @@ const IndexPage = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
-                        action="thank-you"
+                        data-netlify-recaptcha="true"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
@@ -520,10 +518,7 @@ const IndexPage = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              // ref={e => recaptch?aInstance = e}
-                              ref={recaptchaRef}
-                              name="g-recaptcha"
-                              value="value2"
+                              ref={e => recaptchaInstance = e}
                             />
                           </div>
 
