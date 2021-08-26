@@ -435,8 +435,7 @@ const IndexPage = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
-                        data-netlify-recaptcha="true"
-                        action="/thanks/"
+                        action="/book-consultation/"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">

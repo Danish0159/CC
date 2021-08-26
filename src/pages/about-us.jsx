@@ -60,8 +60,9 @@ const About = () => {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "about",
-        ...formState,
+        'g-recaptcha-response': isVerified,
         acceptsconsentcheckbox: acceptsConsentCheckbox,
+        ...formState,
       })
     })
     .catch(error => alert(error));
@@ -279,6 +280,7 @@ const About = () => {
                               onloadCallback={callback}
                               data-netlify-recaptcha="true"
                               ref={e => recaptchaInstance = e}
+                                                      action="/book-consultation/"
                             />
                           </div>
       
