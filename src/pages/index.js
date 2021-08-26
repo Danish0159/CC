@@ -35,8 +35,8 @@ const IndexPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  let recaptchaInstance;
-
+  // let recaptchaInstance; 
+  const recaptchaRef = React.createRef()
   // Netlify code to handle forms.
   const encode = (data) => {
     return Object.keys(data)
