@@ -111,11 +111,11 @@ let recaptchaInstance;
         <title>SmartHomeSafe | Contact Us</title>
         <meta name="description" content="Smart Home Safe | Security Solutions and Services designed to protect your Home Network and Digital Information Assets." />
         <meta name="keywords" content="security solutions, Home Network Security, Digital Information Assets, Smart Home Safe, Smart Home Security, safe smart home security, smart home security services, smart home security, home security solutions, home security smart home, home security software, best smart home security, Home Security." />
-        {/* <script
+        <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script> */}
+        ></script>
       </Helmet>
 
       <section className="new_about_v_t full-waypper-area-about full-waypper-area-contact">
@@ -218,7 +218,7 @@ let recaptchaInstance;
                       method="post" 
                       data-netlify="true" 
                       data-netlify-honeypot="bot-field"
-                      // data-netlify-recaptcha="true"
+                      data-netlify-recaptcha="true"
                       >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="row">

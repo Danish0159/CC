@@ -103,11 +103,11 @@ const About = () => {
         <meta name="description" content="Smart Home Safe is a boutique cybersecurity firm with a mission to help people and households protect and defend their Smart Homes against Cybersecurity Attacks." />
         <meta name="keywords" content="Smart Home Safe, Smart Home Network and Devices,	Smart Home Security, Smart Home Solutions, Home Network Security, Cybersecurity Solutions, Digital Information Assets." />
           
-           {/* <script
+           <script
           src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
           async
           defer
-        ></script> */}
+        ></script>
       </Helmet>
 
       <section className="new_about_v_t full-waypper-area-about">
@@ -215,7 +215,7 @@ const About = () => {
                       method="post" 
                       data-netlify="true" 
                       data-netlify-honeypot="bot-field"
-                      // data-netlify-recaptcha="true"
+                      data-netlify-recaptcha="true"
                       >
                         <input type="hidden" name="form-name" value="about" />
                         <div className="row">
