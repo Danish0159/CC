@@ -22,6 +22,13 @@ import { navigate } from 'gatsby'
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(
+      (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    )
+    .join("&");
+};
 
 const IndexPage = () => {
   // All the state variables.
@@ -41,13 +48,7 @@ const IndexPage = () => {
   const recaptchaRef = React.createRef()
 
   // Netlify code to handle forms.
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+
 
   // Handle all the state variables.
   const handleChange = (e) => {
@@ -438,9 +439,9 @@ const IndexPage = () => {
                         name="home"
                         method="post"
                         data-netlify="true"
-                        data-netlify-honeypot="bot-field"
+                        // data-netlify-honeypot="bot-field"
                         data-netlify-recaptcha="true"
-                        action="/product-services"
+                        action="/product-services/"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
