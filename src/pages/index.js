@@ -77,8 +77,9 @@ const IndexPage = () => {
           "form-name": "home",
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
+          'g-recaptcha-response': "true",
         }),
-      }).then(() => alert("Your form submission has been received.!"))
+      })
         .catch((error) => alert(error));
 
       setFormState({
@@ -431,6 +432,7 @@ const IndexPage = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
+                        data-netlify-recaptcha="true"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">
