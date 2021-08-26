@@ -19,7 +19,6 @@ import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
 import { Link } from 'gatsby'
-import { navigate } from 'gatsby'
 
 
 const IndexPage = () => {
@@ -89,7 +88,7 @@ const IndexPage = () => {
         message: "",
       });
       // recaptchaInstance.reset();
-      // e.preventDefault();
+      e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
       e.preventDefault();
