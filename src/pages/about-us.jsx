@@ -60,11 +60,10 @@ const About = () => {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "about",
-        'g-recaptcha-response': isVerified,
-        acceptsconsentcheckbox: acceptsConsentCheckbox,
         ...formState,
+        acceptsconsentcheckbox: acceptsConsentCheckbox,
       })
-    })
+    }).then(() => alert("Your form submission has been received.!"))
     .catch(error => alert(error));
     
     setFormState({
@@ -73,7 +72,7 @@ const About = () => {
         email: "",
         message: "",
       })
-      e.preventDefault();
+       e.preventDefault();
        recaptchaInstance.reset();
        }
        else{
@@ -278,9 +277,7 @@ const About = () => {
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
-                              data-netlify-recaptcha="true"
                               ref={e => recaptchaInstance = e}
-                                                      action="/book-consultation/"
                             />
                           </div>
       

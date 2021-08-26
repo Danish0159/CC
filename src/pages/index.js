@@ -34,7 +34,7 @@ const IndexPage = () => {
   const [isVerified, setIsVerified] = React.useState(false);
 
   // create a variable to store the component instance
-  const recaptchaInstance = React.createRef()
+  let recaptchaInstance;
 
   // Netlify code to handle forms.
   const encode = (data) => {
@@ -69,20 +69,16 @@ const IndexPage = () => {
 
   // Handle submit
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    const recaptchaValue = recaptchaRef.current.getValue()
     if (isVerified) {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": "home",
-          acceptsconsentcheckbox: acceptsConsentCheckbox,
-          'g-recaptcha-response': recaptchaValue,
           ...formState,
+          acceptsconsentcheckbox: acceptsConsentCheckbox,
         }),
-      }).then(() => navigate(form.getAttribute('action')))
+      }).then(() => alert("Your form submission has been received.!"))
         .catch((error) => alert(error));
 
       setFormState({
@@ -435,7 +431,6 @@ const IndexPage = () => {
                         method="post"
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
-                        action="/book-consultation/"
                       >
                         <input type="hidden" name="form-name" value="home" />
                         <div className="row">

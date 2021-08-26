@@ -71,7 +71,7 @@ const ContactUs = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formState,acceptsconsentcheckbox: acceptsConsentCheckbox, })
-    })
+    }).then(() => alert("Your form submission has been received.!"))
       .catch(error => alert(error));
 
       setFormState({
@@ -80,8 +80,8 @@ const ContactUs = () => {
         email: "",
         message: "",
       })
-       // recaptchaInstance.reset();
-    // e.preventDefault();
+      e.preventDefault();
+      recaptchaInstance.reset();
       }
       else{
          alert("Please verify that you are a human!");

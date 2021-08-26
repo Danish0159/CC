@@ -83,7 +83,7 @@ const ProductServices = () => {
           ...formState,
           acceptsconsentcheckbox: acceptsConsentCheckbox,
         }),
-      })
+      }).then(() => alert("Your form submission has been received.!"))
         .catch((error) => alert(error));
 
       setFormState({
@@ -92,8 +92,8 @@ const ProductServices = () => {
         email: "",
         message: "",
       });
+      e.preventDefault();
       // recaptchaInstance.reset();
-      // e.preventDefault();
     } else {
       alert("Please verify that you are a human!");
       e.preventDefault();
