@@ -514,7 +514,7 @@ const IndexPage = () => {
                           {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}

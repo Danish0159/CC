@@ -941,6 +941,11 @@ textarea {
   padding-bottom: 70px;
 }
 
+/* Special styles for this heading.  */
+#hero_heading {
+  text-align: left;
+}
+
 /*Contact page Css*/
 
 .full-waypper-area-about.full-waypper-area-contact {
@@ -1024,6 +1029,11 @@ textarea {
   display: inline-block;
   font-weight: 400;
 }
+
+.c_info_margin {
+  margin-bottom: 3rem;
+}
+
 .cyber_security_c_items {
   text-align: center;
   background: #ffffff 0% 0% no-repeat padding-box;

@@ -24,8 +24,17 @@ import Layout from "../components/Layout";
 import AOS from "aos";
 import Recaptcha from "react-recaptcha";
 import { Helmet } from "react-helmet";
+import { login } from "../utils/auth";
+
 
 const ProductServices = () => {
+  const onLogin = (e) => {
+    console.log("env", process.env.GATSBY_AUTH0_DOMAIN);
+    e.preventDefault();
+    login();
+  };
+
+
   // All the state variables.
   const [formState, setFormState] = useState({
     name: "",
@@ -136,7 +145,7 @@ const ProductServices = () => {
                 {/* Hero Content */}
                 <div className="col-lg-6">
                   <div className="hero_content_home" data-aos="fade-up">
-                    <h1>Products &amp; Services</h1>
+                    <h1 id="hero_heading">Products &amp; Services</h1>
                     <p>
                       Cybersecurity Solutions made simple for your Home Network.
                       Keep your Smart Home Safe.
@@ -191,7 +200,7 @@ const ProductServices = () => {
                       home network and while you roam.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -224,7 +233,7 @@ const ProductServices = () => {
                       to your home and personal information.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -273,7 +282,7 @@ const ProductServices = () => {
                       before. We are here to protect you.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                     <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -304,7 +313,7 @@ const ProductServices = () => {
                       visited, usernames and passwords, and other tracking data.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -355,7 +364,7 @@ const ProductServices = () => {
                       assets.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -390,7 +399,7 @@ const ProductServices = () => {
                       and valuable information.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -435,7 +444,7 @@ const ProductServices = () => {
                       your valuable information assets through Phishing attacks.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -464,7 +473,7 @@ const ProductServices = () => {
                       Threats.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -509,7 +518,7 @@ const ProductServices = () => {
                       attack.
                     </p>
                     <div className="button">
-                      <Link to="/book-consultation">Subscribe</Link>
+                      <Link to="#" onClick={onLogin}>Subscribe</Link>
                     </div>
                   </div>
                 </div>
@@ -618,7 +627,7 @@ const ProductServices = () => {
                           {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}

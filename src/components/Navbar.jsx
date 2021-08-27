@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/images/logo/logo.png";
-import { login, getProfile } from "../utils/auth";
+import { login } from "../utils/auth";
 
 const Navbar = () => {
   const onLogin = (e) => {
@@ -10,6 +10,7 @@ const Navbar = () => {
     login();
   };
   
+  const [show, setShow] = useState(false)
   return (
     <header class="header_area">
       <div class="container-fluid">
@@ -19,7 +20,8 @@ const Navbar = () => {
               <Link to="/">
                 <img src={logo} alt="SmartHomeSafe" />
               </Link>
-              <a class="nav-bars" href="#">
+              {/*  */}
+              <a class="nav-bars" href="#" onClick={() => setShow(!show)}>
                 <i class="fas fa-bars"></i>
               </a>
             </div>
@@ -64,7 +66,8 @@ const Navbar = () => {
             </div>
             {/* <!-- Top Social Icon --> */}
             {/* -- Main Menu -- */}
-            <div class="menu_area" >
+            {/* menu_area */}
+            <div className={show? "menu_area active": "menu_area"} >
               <ul>
                 <li>
                   <Link activeClassName="active" to="/">

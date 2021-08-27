@@ -137,8 +137,13 @@
     width: 100%;
     background: #069abd;
     z-index: 2;
-    display: none;
     padding: 10px 0px;
+    transform: scale(0);
+    transition: 0.6s all ease;
+  }
+
+  .active ul {
+    transform: scale(1);
   }
 
   .nav-bars {

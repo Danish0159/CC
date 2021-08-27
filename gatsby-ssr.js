@@ -13,6 +13,7 @@ import favicon10 from '/src/assets/images/favicon/android-icon-192x192.png'
 import favicon11 from '/src/assets/images/favicon/favicon-32x32.png'
 import favicon12 from '/src/assets/images/favicon/favicon-96x96.png'
 import favicon13 from '/src/assets/images/favicon/favicon-16x16.png'
+import manifest from '/src/assets/images/favicon/manifest.json'
 
 
 export function onRenderBody(
@@ -32,7 +33,10 @@ export function onRenderBody(
     <link rel="icon" type="image/png" sizes="32x32" href={favicon11} />,
     <link rel="icon" type="image/png" sizes="96x96" href={favicon12} />,
     <link rel="icon" type="image/png" sizes="16x16" href={favicon13} />,
-    <link rel="manifest" href="/manifest.json" />,
+    <link rel="manifest" href={manifest} />,
+    <meta name="msapplication-TileColor" content="#ffffff" />,
+    <meta name="msapplication-TileImage" content="/src/assets/images/favicon/ms-icon-144x144.png" />,
+    <meta name="theme-color" content="#ffffff" />,
     <link rel="preconnect" href="https://fonts.googleapis.com" />,
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />,
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />,

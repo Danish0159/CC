@@ -184,7 +184,7 @@ let recaptchaInstance;
           <section className="contact_area">
             <div className="container">
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 c_info_margin">
                   <div className="c_info" data-aos="fade-down-right">
                     <div className="icon_c">
                       <img src={call} alt="SmartHomeSafe" />
@@ -292,7 +292,7 @@ let recaptchaInstance;
                             {/*  Recaptha */}
                           <div id="recaptcha-module">
                             <Recaptcha
-                              sitekey="6LcAAyQcAAAAAKA0-WGR9vb38hmpyb8rzttm8-rA"
+                              sitekey="6LfR3fQbAAAAAIPAULAl0Jy8IJDmD7agbICsU3Y8"
                               render="explicit"
                               verifyCallback={verifyCallback}
                               onloadCallback={callback}
