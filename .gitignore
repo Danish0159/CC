@@ -3,3 +3,5 @@ node_modules/
 public
 yarn.lock
 .env
+.env.development
+.env.production
