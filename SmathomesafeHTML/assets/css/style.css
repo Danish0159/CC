@@ -1,0 +1,1175 @@
+/*Default css*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/*font-family: 'Lato', sans-serif;*/
+/* Default CSS */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+span,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  background: transparent;
+}
+p a {
+  background: transparent !important;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+a {
+  outline: none !important;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #a7f4f6;
+  color: #555;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  outline: none !important;
+}
+input {
+  outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/*Font*/
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-It.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-It.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-DemiCn.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-DemiCn.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-Demi.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-BoldCn.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-BoldCn.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.full-waypper {
+  overflow: hidden !important;
+}
+/**************************************/
+/************ Header  Area*************/
+/************************************/
+
+.full-waypper-area-about {
+  background: url(../images/background/about-us-background.png) no-repeat scroll
+    0 0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.full-waypper-area-about::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/about-us-hero-logo-vactor.png) no-repeat
+    scroll 0 0 / cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 880px;
+  height: 838px;
+}
+.header_area {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+.menu_area {
+  margin-top: 16px;
+  position: relative;
+}
+.menu_area ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.menu_area ul li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  line-height: 24px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 35px;
+  font-weight: 400;
+  position: relative;
+}
+
+.menu_area ul li:hover a::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 38px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -8px;
+  border-radius: 25px;
+}
+
+.menu_area ul li a.active::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 38px;
+  background: #fff;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -8px;
+  border-radius: 25px;
+}
+
+img {
+  max-width: 100%;
+}
+.hero_image {
+  margin-top: -20px;
+}
+.logo a {
+  overflow: hidden;
+  height: auto;
+  float: left;
+  width: 119px;
+}
+
+.nav-bars .fas.fa-bars {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.nav-bars {
+  position: absolute;
+  right: 13px;
+  top: 2px;
+  display: none !important;
+}
+.hero_content_area {
+  padding-bottom: 177px;
+}
+.hero_image img {
+  width: 100%;
+}
+
+.hero_content_text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.hero_content h1 {
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 61px;
+  color: #fff;
+}
+.hero_content p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 11px;
+}
+.hero_content p {
+  position: relative;
+}
+.hero_content p::after {
+  position: absolute;
+  content: "";
+  background: #019ee2;
+  width: 9px;
+  height: 9px;
+  left: -18px;
+  border-radius: 50%;
+  top: 4px;
+}
+.hero_content p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 11px;
+  margin-left: 18px;
+}
+
+/*Welcome ARea Css*/
+
+.welcome_seaction_area {
+  padding-top: 14px;
+  padding-bottom: 96px;
+}
+.welcome_seaction_area .hero_content p {
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 13px;
+}
+.button {
+  margin-top: 25px;
+}
+.button a {
+  background: transparent -webkit-linear-gradient(
+      344deg,
+      #019ee2 0%,
+      #551598 100%
+    ) 0% 0% no-repeat;
+  background: transparent linear-gradient(106deg, #019ee2 0%, #551598 100%) 0%
+    0% no-repeat;
+  border-radius: 35px 0px 35px 35px;
+  opacity: 1;
+  padding: 20px 22px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 19px;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.button a:hover {
+  background: transparent -webkit-linear-gradient(
+      344deg,
+      #551598 0%,
+      #019ee2 100%
+    ) 0% 0% no-repeat;
+  background: transparent -webkit-linear-gradient(
+      344deg,
+      #551598 0%,
+      #019ee2 100%
+    ) 0% 0% no-repeat;
+  background: transparent linear-gradient(106deg, #551598 0%, #019ee2 100%) 0%
+    0% no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hero_content small {
+  color: #019ee2;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.hero_content h2 {
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  color: #000000;
+  font-size: 73px;
+  line-height: 88px;
+}
+.welcome_image {
+  max-width: 479px;
+  width: 100%;
+}
+.welcome_image img {
+  width: 100%;
+}
+.our_mission_area {
+  padding: 27px;
+  padding-bottom: 51px;
+  background: #f9fbff;
+  position: relative;
+  z-index: 1;
+}
+.our_mission_item {
+}
+.our_mission_item h3 {
+  font-family: "Avenir Next LT Pro";
+  color: #019ee2;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  margin-bottom: 31px;
+}
+.our_mission_item p {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+.our_mission_area::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/our-mission-after.png) no-repeat scroll 0 0 /
+    cover;
+  top: 0px;
+  left: -25px;
+  width: 96px;
+  height: 187px;
+  z-index: -1;
+  bottom: 0;
+  margin: auto;
+}
+/*Contact Css*/
+.contact_area {
+  background: #fff;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 1;
+}
+.contact_from_area h3 {
+  color: #551598;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.contact_from_input {
+  box-shadow: 0px 3px 6px #00000029;
+  border: 2px solid #551598;
+  border-radius: 16px;
+  padding: 32px 29px;
+}
+.contact_image {
+}
+.contact_image img {
+}
+.single_input {
+  margin-bottom: 21px;
+}
+.single_input input,
+.single_input textarea {
+  border: 2px solid #4b286d;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  padding: 14px 11px;
+}
+
+.single_input textarea {
+  height: 117px;
+}
+.Submit_button {
+  text-align: center;
+}
+.Submit_button button {
+  background: #551598 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #4b286d6e;
+  border-radius: 8px;
+  border: none;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  height: 45px;
+  width: 163px;
+  text-align: center;
+  cursor: pointer;
+}
+textarea {
+  outline: none !important;
+}
+
+.contact_area::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+    scroll 0 0 / cover;
+  right: -15px;
+  width: 192px;
+  height: 373px;
+  z-index: -1;
+  bottom: 0;
+}
+
+.footer_area {
+  padding-top: 54px;
+  background: #fff;
+  padding-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+.footer_area .container-fluid .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer_we_accept p {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  padding-bottom: 15px;
+}
+.footer_copyright p {
+  letter-spacing: 0px;
+  color: #551598;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+}
+.footer_social > p {
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  padding-bottom: 11px;
+}
+.footer_area::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/footer_vactor_after.png) no-repeat scroll 0 0 /
+    cover;
+  left: 0px;
+  width: 637px;
+  height: 133px;
+  z-index: -1;
+  bottom: 0;
+}
+.footer_social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.footer_social ul li a {
+  color: #fff;
+  font-size: 15px;
+  margin-right: 22px;
+  display: inline-block;
+}
+
+.header_area > .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 100px;
+}
+
+.footer_we_accept {
+  float: right;
+}
+
+.footer_area > .container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 100px;
+}
+
+/*Home page Css*/
+
+.full-waypper-area-about.full-waypper-area-home {
+  background: url(../images/background/home-us-background.png) no-repeat scroll
+    0 0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero_content_home h1 {
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 59px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.button_home {
+  margin-top: 25px;
+}
+.button_home a {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 15px #565656a3;
+  border-radius: 0px 35px 35px 35px;
+  opacity: 1;
+  padding: 22px 52px;
+  color: #000000;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.button_home a:hover {
+  background: transparent -webkit-linear-gradient(
+      344deg,
+      #551598 0%,
+      #019ee2 100%
+    ) 0% 0% no-repeat;
+  background: transparent -webkit-linear-gradient(
+      344deg,
+      #551598 0%,
+      #019ee2 100%
+    ) 0% 0% no-repeat;
+  background: transparent linear-gradient(106deg, #551598 0%, #019ee2 100%) 0%
+    0% no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.hero_image.hero_image_home {
+  margin-top: 0px;
+}
+.hero_content_home {
+  padding-top: 180px;
+}
+
+.hero_home_content {
+}
+.hero_home_content h3 {
+  font-size: 31px;
+  line-height: 38px;
+  padding-bottom: 30px;
+  color: #4b286d;
+  font-weight: 700;
+}
+.hero_home_content p {
+}
+
+.home_Cybersecurity .container .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.title_hero h3 {
+  font-size: 31px;
+  line-height: 38px;
+  color: #4b286d;
+  font-weight: 700;
+}
+.title_hero p {
+  color: #019ee2;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 8px "";
+}
+.servier_hero_item {
+  padding-top: 86px;
+}
+
+.servier_hero_item {
+  padding-top: 86px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.single_item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  text-align: center;
+}
+.single_item img {
+  width: 80px;
+}
+.single_item p {
+  color: #38396b;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 10px;
+}
+
+.home_Cybersecurity {
+  position: relative;
+  z-index: 1;
+  background: #f9fbff;
+  padding-top: 98px;
+  padding-bottom: 75px;
+}
+.home_Cybersecurity::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+    scroll 0 0 / cover;
+  right: -15px;
+  width: 192px;
+  height: 373px;
+  z-index: -1;
+  top: 0;
+}
+
+.Solutions_home_secion {
+  background: #fff;
+  padding-top: 41px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.Solutions_home_secion::before {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/solution_after.png) no-repeat scroll 0 0 /
+    cover;
+  right: 0px;
+  width: 335px;
+  height: 696px;
+  z-index: -1;
+  top: 121px;
+}
+
+.Solutions_home_secion::after {
+  position: absolute;
+  content: " ";
+  background: url(../images/vactor/our-mission-after_contact.png) no-repeat
+    scroll 0 0 / cover;
+  left: -15px;
+  width: 194px;
+  height: 373px;
+  z-index: -1;
+  bottom: 292px;
+}
+.solutions_single_item_f_area {
+  padding-top: 26px;
+}
+.solutions_single_item_f_area .col-lg-4.col-md-6 {
+}
+.solutions_single_item {
+  text-align: center;
+  margin-bottom: 26px;
+}
+.solutions_single_item img {
+  width: 131px;
+  padding-bottom: 10px;
+}
+.solutions_single_item h4 {
+  color: #4b286d;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  padding-bottom: 14px;
+}
+.solutions_single_item p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  font-weight: 400;
+}
+
+/*Products & Services – 2*/
+.full-waypper-area-about.full-waypper-area-product-services {
+  background: url(../images/background/products-services.png) no-repeat scroll 0
+    0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero_content_home p {
+  color: #fff;
+}
+
+.hero_content_product {
+  padding-bottom: 111px;
+}
+.lock_tala_secion_area {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.hero_content_product .hero_content_home {
+  padding-top: 270px;
+}
+.product_singel_item {
+}
+.product_singel_item img {
+  width: 131px;
+  padding-bottom: 10px;
+}
+
+.product_singel_item h4 {
+  padding-bottom: 14px;
+  font-family: "Avenir Next LT Pro";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #551598;
+}
+.product_singel_item p {
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.product_singel_item .button a {
+  padding: 20px 63px;
+}
+.algin-item-center .container .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.pt_0 {
+  padding-top: 0px !important;
+}
+
+.bg_white {
+  background: #fff;
+}
+
+.bg_gray {
+  background: #f9fbff;
+}
+.sp {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/*Contact page Css*/
+
+.full-waypper-area-about.full-waypper-area-contact {
+  background: url(../images/background/contact-us-background.png) no-repeat
+    scroll 0 0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero_content.hero_content_contact p {
+  margin-left: 0;
+}
+.hero_content.hero_content_contact p::after {
+  display: none;
+}
+.hero_content_area.hero_content_area_contact {
+  padding-bottom: 52px;
+}
+.hero_content.make_contact_c h1 {
+  font-family: "Avenir Next LT Pro";
+  font-weight: 600;
+  font-size: 43px;
+  line-height: 1.2;
+  color: #551598;
+  padding-bottom: 8px;
+}
+.contact_make_secion_area {
+  padding-top: 14px;
+  padding-bottom: 30px;
+}
+.hero_content.make_contact_c p {
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.hero_content.make_contact_c p::after {
+  background: #551598;
+}
+.c_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.c_info.c_info_mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.icon_c {
+  min-width: 79px;
+  margin-right: 27px;
+  overflow: hidden;
+}
+.icon_c_text {
+}
+.icon_c_text h5 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  padding-bottom: 9px;
+}
+.icon_c_text a {
+  color: #000000;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  font-weight: 400;
+}
+.cyber_security_c_items {
+  text-align: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 15px #00000029;
+  border-radius: 25px;
+  opacity: 1;
+  max-width: 277px;
+  margin: auto;
+  height: 100%;
+  padding: 48px 16px 78px 16px;
+}
+.cyber_security_c__area {
+  padding-top: 40px;
+}
+
+.cyber_security_c_items img {
+  width: 131px;
+  height: 131px;
+  margin-bottom: 31px;
+}
+.cyber_security_c__area .col-lg-4.col-md-6 {
+  margin-bottom: 48px;
+}
+.cyber_security_c_items h4 {
+  font-size: 20px;
+  line-height: 26px;
+  color: #551598;
+  font-weight: 400;
+  font-family: "Avenir Next LT Pro";
+}
+
+/*Login page Css*/
+
+.full-waypper-area-about.login-background {
+  background: url(../images/background/login-background.png) no-repeat scroll 0
+    0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.login_and_signup_area .container .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.login_and_signup_area {
+  padding-top: 150px;
+  padding-bottom: 40px;
+}
+.or_text {
+  text-align: center;
+}
+.link_button {
+}
+.link_button a {
+  border: 1px solid #551598;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 19px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #551598;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 50px;
+}
+.link_button a img {
+  padding-right: 19px;
+}
+
+.login_input {
+}
+.login_input input {
+  border: 1px solid #551598;
+  width: 100%;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 15px;
+  margin-bottom: 19px;
+}
+.user_submit {
+}
+.user_submit input {
+  color: #fff;
+  font-family: Avenir Next LT Pro;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  padding: 13px;
+  background: #551598;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.linkg_get_start p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+.linkg_get_start p a {
+  color: #000000;
+  font-weight: 700;
+}
+
+/*Login page Css*/
+
+.full-waypper-area-about.book-onsultation {
+  background: url(../images/background/book-onsultation.png) no-repeat scroll 0
+    0 / 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.calander_secion_area {
+  padding-top: 50px;
+}
+
+.fSwiAYLFAx {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  z-index: 1;
+  width: 105px;
+  height: 105px;
+  overflow: hidden;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none;
+}
+._3t7mZz3weV._3MKqkxnEwi {
+  background-color: inherit !important;
+}
+
+._1EeG_0W5wm {
+  max-height: 120px;
+  display: none;
+}
